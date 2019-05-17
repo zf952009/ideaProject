@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.zi-han.net/theme/hplus/clients.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:44 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>H+ 后台主题UI框架 - 客户管理</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.7/iconfont.css"/>
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+<nav class="breadcrumb">
+    <i class="Hui-iconfont" style=" font-size:25px">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 招聘管理 <span
+        class="c-gray en">&gt;</span> 面试
+    <a style=" float:right; margin-right:20px" href="javascript:location.replace(location.href);" title="刷新"><i
+            class="Hui-iconfont" style=" font-size:22px; font-weight:bold">&#xe68f;</i></a></nav>
+
+
+<div class="wrapper wrapper-content animated fadeInRight">
+
+    <div class="row " style=" padding-bottom:10px">
+
+        <div class="row " style=" padding-bottom:10px">
+            <div class="form-group">
+                <label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">姓名：</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control"/>
+                </div>
+                <label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">身份证号码：</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control"/>
+                </div>
+                <div class="col-sm-5"></div>
+                <div class="col-sm-1">
+                    <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"
+                            style=" text-align:left; margin-top:5px; padding-left:20px; padding-right:20px">
+                        <strong>搜索</strong></button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="row" style=" ">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title" style=" padding-top:5px; padding-bottom:0px">
+                    <h5 style="  margin-top:10px">面试清单</h5>
+                    <!--<span class="l"  style=" margin-left:20px"><a class="btn btn-primary radius" style=" height:30px;  "  data-title="添加记录" href="javascript:;"
+            onclick="member_add('添加记录','../admin/ActicleAdd.aspx?lanmu=1','','500')"><i class="Hui-iconfont">&#xe600;</i>
+            添加记录</a></span>-->
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="table_data_tables.html#">
+                            <i class="fa fa-wrench"></i>
+                        </a>
+                        <!-- <ul class="dropdown-menu dropdown-user">
+                             <li><a href="table_data_tables.html#">品牌故事</a>
+                             </li>
+                             <li><a href="table_data_tables.html#">工程案例</a>
+                             </li>
+                             <li><a href="table_data_tables.html#">企业动态</a>
+                             </li>
+                             <li><a href="table_data_tables.html#">社会影响</a>
+                             </li>
+                         </ul>-->
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+
+                    <table class="table table-striped table-bordered table-hover dataTables-example">
+                        <thead>
+                        <tr>
+                            <th>编码规则</th>
+                            <th>姓名</th>
+                            <th>性别</th>
+                            <th>学历</th>
+                            <th>年龄</th>
+                            <th>联系电话</th>
+                            <th>身份证号码</th>
+                            <th>工种</th>
+                            <th>持有证件类型</th>
+                            <th>现居住地</th>
+                            <th>面试结果</th>
+                            <th>复试结果</th>
+                            <th>体检结果</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="gradeX">
+                            <td>HS04-ZP-06</td>
+                            <td>刘仲玺</td>
+                            <td>男</td>
+                            <td class="center">本科</td>
+                            <td class="center">25</td>
+                            <td class="center">15076567676</td>
+
+                            <td>43030307688753476</td>
+                            <td>钳工</td>
+                            <td>钳工证</td>
+                            <td class="center">湖北武汉</td>
+                            <td class="center">通过</td>
+                            <td class="center">通过</td>
+
+                            <td class="center">通过</td>
+
+                            <td class="f-14 td-manage">
+                              
+                           
+
+                                <a style="text-decoration: none; margin-left: 10px" onclick="article_del(this,1)"
+                                   class="btn btn-sm btn-success  "
+                                   href="javascript:;" title="删除">一键派遣</a>
+
+                                <a style="text-decoration: none; margin-left: 10px" onclick="article_del(this,1)"
+                                   class="btn btn-sm btn-danger  "
+                                   href="javascript:;" title="删除">暗档</a>
+
+                            
+
+                            </td>
+                        </tr>
+
+                        <tr class="gradeX">
+                            <td>HS04-ZP-07</td>
+                            <td>刘凯</td>
+                            <td>男</td>
+                            <td class="center">本科</td>
+                            <td class="center">20</td>
+                            <td class="center">15076567676</td>
+
+                            <td>43030307688753476</td>
+                            <td>钳工</td>
+                            <td>钳工证</td>
+                            <td class="center">湖北武汉</td>
+                            <td class="center">通过</td>
+
+                            <td class="center">通过</td>
+
+
+                            <td class="center">通过</td>
+
+
+                            <td class="f-14 td-manage">
+                                <a style="text-decoration: none; margin-left: 10px" onclick="article_del(this,1)"
+                                   class="btn btn-sm btn-success  "
+                                   href="javascript:;" title="删除">一键派遣</a>
+
+                                <a style="text-decoration: none; margin-left: 10px" onclick="article_del(this,1)"
+                                   class="btn btn-sm btn-danger  "
+                                   href="javascript:;" title="删除">暗档</a>
+
+                            </td>
+                        </tr>
+
+                        <tr class="gradeX">
+                            <td>HS04-ZP-09</td>
+                            <td>刘五</td>
+                            <td>男</td>
+                            <td class="center">专科</td>
+                            <td class="center">25</td>
+                            <td class="center">15076567676</td>
+
+                            <td>43030307688753476</td>
+                            <td>焊工</td>
+                            <td>焊工证</td>
+                            <td class="center">湖北武汉</td>
+                            <td class="center">通过</td>
+                            <td class="center">通过</td>
+
+
+                            <td class="center">通过</td>
+
+
+
+                            <td class="f-14 td-manage">
+                                <a style="text-decoration: none; margin-left: 10px" onclick="article_del(this,1)"
+                                   class="btn btn-sm btn-success  "
+                                   href="javascript:;" title="删除">一键派遣</a>
+
+                                <a style="text-decoration: none; margin-left: 10px" onclick="article_del(this,1)"
+                                   class="btn btn-sm btn-danger  "
+                                   href="javascript:;" title="删除">暗档</a>
+
+                            </td>
+                        </tr>
+
+                        </tbody>
+                        <tfoot>
+                        <!--<tr>
+                            <th>渲染引擎</th>
+                            <th>浏览器</th>
+                            <th>平台</th>
+                            <th>引擎版本</th>
+                            <th>CSS等级</th>
+                            <th>操作</th>
+                        </tr>-->
+                        </tfoot>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="js/jquery.min.js?v=2.1.4"></script>
+<script src="js/bootstrap.min.js?v=3.3.6"></script>
+<script src="js/plugins/jeditable/jquery.jeditable.js"></script>
+<script src="js/plugins/dataTables/jquery.dataTables.js"></script>
+<script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+<script type="text/javascript" src="lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="lib/My97DatePicker/WdatePicker.js"></script>
+<script src="js/content.min.js?v=1.0.0"></script>
+<script>
+    $(document).ready(function () {
+        $(".dataTables-example").dataTable();
+        var oTable = $("#editable").dataTable();
+        oTable.$("td").editable("http://www.zi-han.net/theme/example_ajax.php", {
+            "callback": function (sValue, y) {
+                var aPos = oTable.fnGetPosition(this);
+                oTable.fnUpdate(sValue, aPos[0], aPos[1])
+            }, "submitdata": function (value, settings) {
+                return {"row_id": this.parentNode.getAttribute("id"), "column": oTable.fnGetPosition(this)[2]}
+            }, "width": "90%", "height": "100%"
+        })
+    });
+    function fnClickAddRow() {
+        $("#editable").dataTable().fnAddData(["Custom row", "New row", "New row", "New row", "New row"])
+    }
+    ;
+</script>
+
+<script>
+    function member_add(title, url, w, h) {
+        layer_show(title, url, w, h);
+    }
+</script>
+
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+</body>
+</html>

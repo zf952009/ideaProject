@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.zi-han.net/theme/hplus/clients.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:44 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>H+ 后台主题UI框架 - 客户管理</title>
+    <link rel="shortcut icon" href="favicon.ico"> 
+    <link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.7/iconfont.css" />
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+<style>
+    .textright{
+    text-align:right;
+    padding:0
+    }
+    </style>
+</head>
+
+<body class="gray-bg">
+    <nav class="breadcrumb">
+    <i class="Hui-iconfont"  style=" font-size:25px">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 新闻
+    <a  style=" float:right; margin-right:20px"  href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont"  style=" font-size:22px; font-weight:bold">&#xe68f;</i></a></nav>
+
+
+
+    <div class="wrapper wrapper-content animated fadeInRight" >
+
+        <div class=""  >
+
+         
+    
+
+        <div class="row" style=" ">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                   <!-- <div class="ibox-title"  style=" padding-top:5px; padding-bottom:0px">
+                        <h5 style="  margin-top:10px">用人需求</h5>
+                        <!--<span class="l"  style=" margin-left:20px"><a class="btn btn-primary radius" style=" height:30px;  "  data-title="添加记录" href="javascript:;"
+                onclick="member_add('添加记录','../admin/ActicleAdd.aspx?lanmu=1','','500')"><i class="Hui-iconfont">&#xe600;</i>
+                添加记录</a></span>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="table_data_tables.html#">
+                                <i class="fa fa-wrench"></i>
+                            </a>-->
+                           <!-- <ul class="dropdown-menu dropdown-user">
+                                <li><a href="table_data_tables.html#">品牌故事</a>
+                                </li>
+                                <li><a href="table_data_tables.html#">工程案例</a>
+                                </li>
+                                <li><a href="table_data_tables.html#">企业动态</a>
+                                </li>
+                                <li><a href="table_data_tables.html#">社会影响</a>
+                                </li>
+                            </ul>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div> -->
+                    <table class="table table-bordered">
+    <thead>
+        <tr>
+            <th colspan="8">新闻</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td width="6%" class="textright">标题:</td>
+            <td colspan="7" style="padding:0;font-size:0"><input style="width:100%;height:37px;font-size:12px" type="text" class="form-control" /></td>
+            
+        </tr>
+        
+        <tr   >
+            <td width="6%"  class="textright" >正文：</td>
+            <td  colspan="7" rowspan="16" style="padding:0;font-size:0"><textarea  style="width:100%;height:592px;font-size:12px" type="textarea"  id="ebreContent" name="ebreContent" rows="4" class="form-control  ckeditor" > </textarea></td>
+            
+            </tr>
+        <tr><td width="6%" rowspan="15"></td> </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+           <tr>
+        
+            
+            <td colspan="8" style="padding:0;font-size:0"><button  style="width:5%;height:37px;font-size:12px;float:right" class="btn  btn-primary">提交</button></td>
+        </tr>  
+        
+        
+        <!--<tr  >
+            <td width="6%" rowspan="2" class="textright" >备注：</td>
+            <td  colspan="7" rowspan="2" style="padding:0;font-size:0"><textarea  style="width:100%;height:54px;font-size:12px" type="textarea"  rows="2" class="form-control" > </textarea></td>
+            
+        </tr>
+        <tr> </tr>
+            <tr>
+            
+            <td width="6%" class="textright">填表时间:</td>
+            <td width="19%" style="padding:0;font-size:0"><input style="width:100%;height:37px;font-size:12px" type="date" class="form-control" /></td>
+            <td colspan="6" style="padding:0;font-size:0"><button  style="width:5%;height:37px;font-size:12px;float:right" class="btn  btn-primary">提交</button></td>
+            
+             </tr>
+             <-->
+
+        
+            </tbody>
+</table>
+                </div>
+            </div>
+        </div>
+  
+    </div>
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="js/plugins/jeditable/jquery.jeditable.js"></script>
+    <script src="js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script type="text/javascript" src="lib/layer/2.1/layer.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="lib/My97DatePicker/WdatePicker.js"></script> 
+    <script src="js/content.min.js?v=1.0.0"></script>
+    <script>
+        $(document).ready(function () { $(".dataTables-example").dataTable(); var oTable = $("#editable").dataTable(); oTable.$("td").editable("http://www.zi-han.net/theme/example_ajax.php", { "callback": function (sValue, y) { var aPos = oTable.fnGetPosition(this); oTable.fnUpdate(sValue, aPos[0], aPos[1]) }, "submitdata": function (value, settings) { return { "row_id": this.parentNode.getAttribute("id"), "column": oTable.fnGetPosition(this)[2]} }, "width": "90%", "height": "100%" }) }); function fnClickAddRow() { $("#editable").dataTable().fnAddData(["Custom row", "New row", "New row", "New row", "New row"]) };
+    </script>
+
+    <script>
+        function member_add(title, url, w, h) {
+            layer_show(title, url, w, h);
+        }
+    </script>
+
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+    <script src="ckeditor/ckeditor.js"></script>
+    </body>
+</html>

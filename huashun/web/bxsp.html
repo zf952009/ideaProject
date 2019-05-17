@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.zi-han.net/theme/hplus/form_validate.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:15 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>H+ 后台主题UI框架 - 表单验证 jQuery Validation</title>
+ 
+
+ <link rel="shortcut icon" href="favicon.ico"> 
+    <link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.7/iconfont.css" />
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <style>
+			.tbxx tr {
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+			
+			.tbxx td {
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			
+			.form-group {
+				height: 40px
+			}
+			
+			.labelleft {
+				width: 100px;
+				text-align: right;
+				font-weight: bold;
+				background: #eee;
+			}
+			
+			.labeltext-c {
+				text-align: center;
+				font-weight: bold;
+				background: #eee;
+			}
+			
+			.labeltext-l {
+				text-align: left;
+				font-weight: bold;
+				background: #eee;
+				text-indent: 10px;
+			}
+			
+			.conright {
+				width: 350px
+			}
+			
+			.jlwrapper td {
+				/*padding-left: 10px;*/
+				padding-right: 10px;
+				height: 40px;
+				line-height:none
+			}
+			
+			.jlwrapper td input[type=text] {
+				border: transparent;
+			}
+			
+			.jlwrapper .textright {
+				text-align: right;
+			}
+			.jlwrapper td input[type=radio]{
+			margin:0
+			}
+			.jlwrapper th {
+				height: 40px;
+				background: #555;
+				color: #fff;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			.otherwapper{
+				padding: 20px;
+				background: #fff;
+				max-width:1200px
+			}
+			.otherwapper td,.otherwapper th{
+				height: 40px;
+				text-align: center;
+			}
+			.otherwapper .title{
+				height: 40px;
+				line-height: 40px;
+				font-size: 14px;
+				font-weight: 700;
+				background: #eee;
+				text-indent: 10px;
+				 background-image:-webkit-linear-gradient(to top, #eee, #fff,#eee);
+  background-image:linear-gradient(to top,#eee, #fff,#eee);
+			}
+			.otherwapper .text-waring{
+				color: #f00;
+			}
+			.otherwapper .text-success{
+				color: green;
+			}
+		</style>
+
+</head>
+
+<body class="gray-bg">
+ <nav class="breadcrumb">
+    <i class="Hui-iconfont"  style=" font-size:25px">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 审批 <span class="c-gray en">&gt;</span> 请假审批 
+    <a  style=" float:right; margin-right:20px"  href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont"  style=" font-size:22px; font-weight:bold">&#xe68f;</i></a></nav>
+    <div class="wrapper wrapper-content animated fadeInRight">
+       
+        <div class="row">
+            <div class="">
+                <div class="ibox float-e-margins">
+                    
+                    <div class="jlwrapper" style="background: #fff;padding: 20px;max-width:1200px;margin:0 auto">
+				<div class="ibox-title">
+                        <h5>报销申请提交</h5>
+                     
+                    </div>
+					<table border="1" cellspacing="" cellpadding="">
+						<tr>
+							<th colspan="8"><span>唯一识别编号：<strong style="font-size: 16px;">231321310</strong></span></th>
+						</tr>
+						<tr>
+							<td class="labelleft">申请人：</td>
+							<td colspan="7"><input type="text" class="form-control" value="刘中玺" /></td>
+						</tr>
+						<tr>
+							<td class="labelleft">经办人：</td>
+							<td><input type="text" class="form-control" value="李经理" /></td>
+							<td class="labelleft">费用（成本）：</td>
+							<td><input type="text" class="form-control" value="出差费用和出差补贴" /></td>
+							<td class="labelleft">归属部门：</td>
+							<td><input type="text" class="form-control" value="研发中心" /></td>
+							<td class="labelleft">日期：</td>
+							<td><input type="text" class="form-control" value="2015-12-09 12:21:12" /></td>
+						</tr>
+						
+						<tr class="padding10">
+							<td colspan="8" class="labeltext-l">
+								报销明细说明
+							</td>
+						</tr>
+						
+						<tr class="padding10">
+							<td class="labelleft">序号</td>
+							<td colspan="3" class="labeltext-c">摘要</td>
+							<td colspan="4" class="labeltext-c">金额</td>
+						</tr>
+						<tr>
+							<td class="labelleft">1</td>
+							<td colspan="3"><input type="text" class="form-control" value="balabala" /></td>
+							<td colspan="4" class="textright"><input type="text" class="form-control" value="12" style="text-align: right;" /></td>
+						</tr>
+						<tr>
+							<td class="labelleft">2</td>
+							<td colspan="3"><input type="text" class="form-control" value="balabala" /></td>
+							<td colspan="4" class="textright"><input type="text" class="form-control" value="12" style="text-align: right;" /></td>
+						</tr>
+						<tr>
+							<td class="labelleft">3</td>
+							<td colspan="3"><input type="text" class="form-control" value="balabala" /></td>
+							<td colspan="4" class="textright"><input type="text" class="form-control" value="12"  style="text-align: right;"/></td>
+						</tr>
+						<tr>
+							<td class="labelleft">大写合计：</td>
+							<td colspan="3"><input type="text" class="form-control" value="壹贰" /></td>
+							<td class="labelleft">小写合计：</td>
+							<td colspan="3" class="textright"><input type="text" class="form-control" value="12"  style="text-align: right;"/></td>
+						</tr>
+						
+						<tr>
+							<td class="labelleft">备注：</td>
+							<td colspan="3"><input type="text" class="form-control" value="" /></td>
+
+							<td class="labelleft">发票情况：</td>
+							<td><input type="text" class="form-control" value="" /></td>
+							<td class="labelleft">签收人：</td>
+							<td><input type="text" class="form-control" value="" /></td>
+						</tr>
+						<tr>
+							<td class="labelleft">流程引用：</td>
+							<td colspan="7"><input type="text" class="form-control" value="" /></td>
+						</tr>
+						<tr>
+							<td class="labelleft">附件：</td>
+							<td colspan="7">
+								<a href="#">123</a>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="8" class="labeltext-l">
+								流程中：巴拉巴拉小魔仙
+							</td>
+						</tr>
+					</table>
+
+				</div>
+              
+							</div>
+            </div> 
+
+       </div>
+			 <div class="otherwapper" style="margin:0 auto">
+					<div class="title">
+						流程实例-【报销申请-刘中玺-201612198华顺项目出差报销，1388--刘中玺】审批历史明细
+					</div>
+					<table border="1" cellspacing="" cellpadding="" style="width: 100%;">
+						<tr style="background: #eee;">
+							<th style="width: 50px;">序号</th>
+							<th>任务名称</th>
+							<th style="width: 100px;">执行人</th>
+							<th style="width: 160px;">开始时间</th>
+							<th>处理时长</th>
+							<th>意见</th>
+							<th style="width: 120px;">状态</th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>巴拉巴</td>
+							<td>悟空</td>
+							<td>1023-12-20 10:21:31</td>
+							<td>3小时</td>
+							<td></td>
+							<td> <span class="text-success">同意</span></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>巴拉巴</td>
+							<td>悟空</td>
+							<td>1023-12-20 10:21:31</td>
+							<td>3小时</td>
+							<td></td>
+							<td> <span  class="text-success">提交</span></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>巴拉巴</td>
+							<td>悟空</td>
+							<td>1023-12-20 10:21:31</td>
+							<td>3小时</td>
+							<td></td>
+							<td> <span class="text-waring">尚未处理</span></td>
+						</tr>
+					</table>
+				</div>						
+        </div>
+    </div>
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="js/content.min.js?v=1.0.0"></script>
+    <script src="js/plugins/validate/jquery.validate.min.js"></script>
+    <script src="js/plugins/validate/messages_zh.min.js"></script>
+    <script src="js/demo/form-validate-demo.min.js"></script>
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+</body>
+
+
+<!-- Mirrored from www.zi-han.net/theme/hplus/form_validate.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:16 GMT -->
+</html>

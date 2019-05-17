@@ -1,0 +1,488 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<!-- Mirrored from www.zi-han.net/theme/hplus/form_validate.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:15 GMT -->
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>H+ 后台主题UI框架 - 表单验证 jQuery Validation</title>
+
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+		<link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+		<link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+		<link href="css/animate.min.css" rel="stylesheet">
+		<link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.7/iconfont.css" />
+		<style>
+		.myrow{
+			margin-bottom: 20px;
+		}
+			.myrow .myicon {
+				font-size: 35px;
+				color: #fff;
+			}
+			
+			.myrow .myspan {
+				font-size: 18px;
+				color: #fff;
+				padding-left: 20px;
+			}
+			
+			.mydes {
+				font-size: 12px;
+				color: #fff;
+				padding: 14px 0;
+			}
+			
+			.mydes span {
+				margin-right: 30px;
+			}
+			
+			.mybg {
+				width: 100%;
+			}
+			
+			.myrow:nth-of-type(1) .col-sm-6:nth-of-type(1) .mybg{
+				background: #4cafea
+			}
+			.myrow:nth-of-type(1) .col-sm-6:nth-of-type(2) .mybg{
+				background: #eed03e
+			}
+			.myrow:nth-of-type(2) .col-sm-6:nth-of-type(1) .mybg{
+				background: #3fb135
+			}
+			.myrow:nth-of-type(2) .col-sm-6:nth-of-type(2) .mybg{
+				background:  #e04d69
+			}
+			
+			.myrow:nth-of-type(3) .col-sm-6:nth-of-type(1) .mybg{
+				background: #1c9878
+			}
+			.myrow:nth-of-type(3) .col-sm-6:nth-of-type(2) .mybg{
+				background:  #1772c2
+			}
+		</style>
+	</head>
+
+	<body class="gray-bg">
+		<nav class="breadcrumb">
+			<i class="Hui-iconfont" style=" font-size:25px">&#xe67f;</i> 首页
+			<a style=" float:right; margin-right:20px" href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont" style=" font-size:22px; font-weight:bold">&#xe68f;</i></a>
+		</nav>
+		<div class="wrapper wrapper-content animated fadeInRight" style=" background-color:#eee">
+
+			<!--自定义行1s-->
+
+			<div class="row myrow">
+				<div class="col-sm-6">
+					<div class="col-sm-10 mybg">
+						<div class="col-sm-12">
+							<i class="Hui-iconfont myicon">&#xe63a;</i>
+							<span class="myspan">应收账款（上月）¥：50,000</span>
+						</div>
+						<div class="col-sm-12">
+							<div class="mydes"><span>社保（上月）¥:3600.00</span><span>个税（上月）¥:160.00</span><br/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="col-sm-10 mybg">
+						<div class="col-sm-12">
+							<i class="Hui-iconfont myicon">&#xe63a;</i>
+							<span class="myspan">应发工资（上月）¥：50,000</span>
+						</div>
+						<div class="col-sm-12">
+							<div class="mydes"><span>社保（上月）¥:3600.00</span><span>个税（上月）¥:160.00</span><br/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--自定义行1e-->
+
+			<!--自定义行2s-->
+
+			<div class="row myrow">
+				<div class="col-sm-6">
+					<div class="col-sm-10 mybg">
+						<div class="col-sm-12">
+							<i class="Hui-iconfont myicon">&#xe611;</i>
+							<span class="myspan">员工数：9/1</span>
+						</div>
+						<div class="col-sm-12">
+							<div class="mydes"><span>本月用工人:9</span><span>本月离职人:1</span><br/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="col-sm-10 mybg">
+						<div class="col-sm-12">
+							<i class="Hui-iconfont myicon">&#xe639;</i>
+							<span class="myspan">用工信息/劳务合同：3/11</span>
+						</div>
+						<div class="col-sm-12">
+							<div class="mydes"><span>用工率:10.00%</span><span>签约率:6.00%</span><br/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--自定义行2e-->
+
+			<!--自定义行3s-->
+
+			<div class="row myrow">
+				<div class="col-sm-6">
+					<div class="col-sm-10 mybg">
+						<div class="col-sm-12">
+							<i class="Hui-iconfont myicon">&#xe63a;</i>
+							<span class="myspan">待办事项：16/32</span>
+						</div>
+						<div class="col-sm-12">
+							<div class="mydes"><span>逾期事项:6</span><span>当月待办:10/21</span><br/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="col-sm-10 mybg">
+						<div class="col-sm-12">
+							<i class="Hui-iconfont myicon">&#xe63a;</i>
+							<span class="myspan">新闻通知：5</span>
+						</div>
+						<div class="col-sm-12">
+							<div class="mydes"><span>公司通知:3</span><span>部门通知:8</span><br/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--自定义行3e-->
+
+			<div class="row ">
+
+				<div class="col-sm-6 ">
+					<div class="ibox ">
+						<div class="ibox-content ">
+							<a href="article.html " class="btn-link ">
+								<h2>
+                            董事长明天发红包！
+                        </h2>
+							</a>
+							<div class="small m-b-xs ">
+								<span class="text-muted "><i class="fa fa-clock-o "></i> 3 小时前</span>
+							</div>
+							<p>
+								董事长明天发红包！董事长明天发红包！董事长明天发红包！董事长明天发红包！董事长明天发红包！董事长明天发红包！董事长明天发红包！董事长明天发红包！董事长明天发红包！董事长明天发红包！董事长明天发红包！董事长明天发红包！董事长明天发红包！董事长明天发红包！董事长明天发红包！董事长明天发红包！
+							</p>
+							<div class="row ">
+								<div class="col-md-6 ">
+									<h5>关联单位：</h5>
+									<button class="btn btn-primary btn-xs " type="button ">部门新闻</button>
+									<button class="btn btn-white btn-xs " type="button ">董事长</button>
+								</div>
+								<div class="col-md-6 ">
+									<div class="small text-right ">
+										<h5>状态：</h5>
+										<div><i class="fa fa-comments-o "> </i> 开启</div>
+										<i class="fa fa-eye "> </i> 生效时间：2016年12月12日
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-sm-6 ">
+					<div class="ibox ">
+						<div class="ibox-content ">
+							<a href="article.html " class="btn-link ">
+								<h2>
+                            娟姐明天发红包！
+                        </h2>
+							</a>
+							<div class="small m-b-xs ">
+								<span class="text-muted "><i class="fa fa-clock-o "></i> 3 小时前</span>
+							</div>
+							<p>
+								娟姐明天发红包！ 娟姐明天发红包！ 娟姐明天发红包！ 娟姐明天发红包！ 娟姐明天发红包！ 娟姐明天发红包！ 娟姐明天发红包！ 娟姐明天发红包！ 娟姐明天发红包！ 娟姐明天发红包！ 娟姐明天发红包！ 娟姐明天发红包！ 娟姐明天发红包！ 娟姐明天发红包！ 娟姐明天发红包！
+							</p>
+							<div class="row ">
+								<div class="col-md-6 ">
+									<h5>关联单位：</h5>
+									<button class="btn btn-primary btn-xs " type="button ">部门新闻</button>
+									<button class="btn btn-white btn-xs " type="button ">董事长</button>
+								</div>
+								<div class="col-md-6 ">
+									<div class="small text-right ">
+										<h5>状态：</h5>
+										<div><i class="fa fa-comments-o "> </i> 开启</div>
+										<i class="fa fa-eye "> </i> 生效时间：2016年12月12日
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+			<div class="row">
+
+				<div class="col-sm-6 ">
+					<div class="ibox ">
+						<div class="ibox-content ">
+							<a href="article.html " class="btn-link ">
+								<h2>
+关于java,这几点你要知道哦                        </h2>
+							</a>
+							<div class="small m-b-xs ">
+								<span class="text-muted "><i class="fa fa-clock-o "></i> 2 小时前</span>
+							</div>
+							<p>
+								元旦放假哪里嗨？</p>
+							<p>
+
+								敲代码的人哪里浪去了！ 敲代码的人哪里浪去了！ 敲代码的人哪里浪去了！ 敲代码的人哪里浪去了！ 敲代码的人哪里浪去了！ 敲代码的人哪里浪去了！ 敲代码的人哪里浪去了！ 敲代码的人哪里浪去了！ 里浪去了！ 敲代码的人哪里浪去了！ 敲代码的人哪里浪去了！
+							</p>
+							<div class="row ">
+								<div class="col-md-6 ">
+									<h5>关联单位：</h5>
+									<button class="btn btn-danger btn-xs " type="button ">人事部</button>
+									<button class="btn btn-primary btn-xs " type="button ">招聘部</button>
+									<button class="btn btn-primary btn-xs " type="button ">业务部</button>
+									<button class="btn btn-white btn-xs " type="button ">技术部</button>
+
+								</div>
+								<div class="col-md-6 ">
+									<div class="small text-right ">
+										<h5>状态：</h5>
+										<div><i class="fa fa-comments-o "> </i> 开启</div>
+										<i class="fa fa-eye "> </i> 生效时间：2016-12-13
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6 ">
+					<div class="ibox ">
+						<div class="ibox-content ">
+							<a href="article.html " class="btn-link ">
+								<h2>
+明天放假！                        </h2>
+							</a>
+							<div class="small m-b-xs ">
+								<span class="text-muted "><i class="fa fa-clock-o "></i> 2 小时前</span>
+							</div>
+							<p>
+								元旦放假哪里嗨？</p>
+							<p>
+
+								敲代码的人哪里浪去了！ 敲代码的人哪里浪去了！ 敲代码的人哪里浪去了！ 敲代码的人哪里浪去了！ 敲代码的人哪里浪去了！ 敲代码的人哪里浪去了！ 敲代码的人哪里浪去了！ 敲代码的人哪里浪去了！ 里浪去了！ 敲代码的人哪里浪去了！ 敲代码的人哪里浪去了！
+							</p>
+							<div class="row ">
+								<div class="col-md-6 ">
+									<h5>关联单位：</h5>
+									<button class="btn btn-danger btn-xs " type="button ">人事部</button>
+									<button class="btn btn-primary btn-xs " type="button ">招聘部</button>
+									<button class="btn btn-primary btn-xs " type="button ">业务部</button>
+									<button class="btn btn-white btn-xs " type="button ">技术部</button>
+
+								</div>
+								<div class="col-md-6 ">
+									<div class="small text-right ">
+										<h5>状态：</h5>
+										<div><i class="fa fa-comments-o "> </i> 开启</div>
+										<i class="fa fa-eye "> </i> 生效时间：2016-12-13
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<!--
+<div class="row " style=" margin-top:20px ">
+
+    <div class="col-sm-3 " style=" height:550px; width:73%; background-color:#eee; margin-right:2% ">
+        <div class="row ">
+            <div class="col-sm-7 ">
+                <div class="ibox float-e-margins ">
+                    <div class="ibox-title ">
+                        <h5>折线图</h5>
+                        <div class="ibox-tools ">
+                            <a class="collapse-link ">
+                                <i class="fa fa-chevron-up "></i>
+                            </a>
+                            <a class="dropdown-toggle " data-toggle="dropdown " href="graph_flot.html# ">
+                                <i class="fa fa-wrench "></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user ">
+                                <li><a href="graph_flot.html# ">选项1</a>
+                                </li>
+                                <li><a href="graph_flot.html# ">选项2</a>
+                                </li>
+                            </ul>
+                            <a class="close-link ">
+                                <i class="fa fa-times "></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content ">
+                        <div class="echarts " id="echarts-line-chart " style=" height:500px "></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-5 ">
+                <span style=" font-weight:bold; line-height:50px; margin-left:20px ">日常工作台：</span>
+                <div class="ibox ">
+                    <div class="ibox-content ">
+                        <h5>员工用工使用率</h5>
+                        <h2>65%</h2>
+                        <div class="progress progress-mini ">
+                            <div style="width: 68%; " class="progress-bar "></div>
+                        </div>
+
+                        <div class="m-t-sm small ">4:32更新</div>
+                    </div>
+                </div>
+                <div class="ibox ">
+                    <div class="ibox-content ">
+                        <h5>员工未设置薪酬概率</h5>
+                        <h2>45%</h2>
+                        <div class="progress progress-mini ">
+                            <div style="width: 45%; " class="progress-bar progress-bar-danger "></div>
+                        </div>
+
+                        <div class="m-t-sm small ">4:32更新</div>
+                    </div>
+                </div>
+                <div class="ibox ">
+                    <div class="ibox-content ">
+                        <h5>员工合同签约率</h5>
+                        <h2>95%</h2>
+                        <div class="progress progress-mini ">
+                            <div style="width: 95%; " class="progress-bar "></div>
+                        </div>
+
+                        <div class="m-t-sm small ">4:32更新</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2 " style=" height:550px; width:23%; background-color:#eee; ">
+
+        <span style=" font-weight:bold; line-height:50px; margin-left:20px ">用工信息状态：</span>
+        <div class="ibox ">
+            <div class="ibox-content ">
+                <h5>预警</h5>
+                <table class="table table-stripped small m-t-md ">
+                    <tbody>
+                    <tr>
+                        <td class="no-borders ">
+                            <i class="fa fa-circle text-danger "></i>
+                        </td>
+                        <td class="no-borders ">
+                            示例 01
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="fa fa-circle text-danger "></i>
+                        </td>
+                        <td>
+                            示例 02
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="fa fa-circle text-danger "></i>
+                        </td>
+                        <td>
+                            示例 03
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="ibox ">
+            <div class="ibox-content ">
+                <h5>项目</h5>
+                <table class="table table-stripped small m-t-md ">
+                    <tbody>
+                    <tr>
+                        <td class="no-borders ">
+                            <i class="fa fa-circle text-navy "></i>
+                        </td>
+                        <td class="no-borders ">
+                            示例 01
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="fa fa-circle text-navy "></i>
+                        </td>
+                        <td>
+                            示例 02
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="fa fa-circle text-navy "></i>
+                        </td>
+                        <td>
+                            示例 03
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+
+		<!-- <script src="js/jquery.min.js?v=2.1.4 "></script>
+ <script src="js/bootstrap.min.js?v=3.3.6 "></script>
+ <script src="js/content.min.js?v=1.0.0 "></script>
+ <script src="js/plugins/validate/jquery.validate.min.js "></script>
+ <script src="js/plugins/validate/messages_zh.min.js "></script>
+ <script src="js/demo/form-validate-demo.min.js "></script>-->
+		<script type="text/javascript " src="http://tajs.qq.com/stats?sId=9051096 " charset="UTF-8 "></script>
+
+		<script src="js/jquery.min.js?v=2.1.4 "></script>
+		<script src="js/bootstrap.min.js?v=3.3.6 "></script>
+		<script src="js/plugins/echarts/echarts-all.js "></script>
+		<script src="js/content.min.js?v=1.0.0 "></script>
+		<script src="js/demo/echarts-demo.min.js "></script>
+
+		<!--<script src="js/plugins/sparkline/jquery.sparkline.min.js "></script>
+<script src="js/plugins/peity/jquery.peity.min.js "></script>
+<script src="js/content.min.js?v=1.0.0 "></script>
+<script src="js/demo/peity-demo.min.js "></script>
+-->
+
+		<!-- <script>
+     $(document).ready(function () { $("#sparkline1 ").sparkline([34, 43, 43, 35, 44, 32, 44, 52], { type: "line ", width: "100% ", height: "60 ", lineColor: "#1ab394 ", fillColor: "#ffffff " }); $("#sparkline2 ").sparkline([24, 43, 43, 55, 44, 62, 44, 72], { type: "line ", width: "100% ", height: "60 ", lineColor: "#1ab394 ", fillColor: "#ffffff " }); $("#sparkline3 ").sparkline([74, 43, 23, 55, 54, 32, 24, 12], { type: "line ", width: "100% ", height: "60 ", lineColor: "#ed5565 ", fillColor: "#ffffff " }); $("#sparkline4 ").sparkline([24, 43, 33, 55, 64, 72, 44, 22], { type: "line ", width: "100% ", height: "60 ", lineColor: "#ed5565 ", fillColor: "#ffffff " }); $("#sparkline5 ").sparkline([1, 4], { type: "pie ", height: "140 ", sliceColors: ["#1ab394 ", "#F5F5F5 "] }); $("#sparkline6 ").sparkline([5, 3], { type: "pie ", height: "140 ", sliceColors: ["#1ab394 ", "#F5F5F5 "] }); $("#sparkline7 ").sparkline([2, 2], { type: "pie ", height: "140 ", sliceColors: ["#ed5565 ", "#F5F5F5 "] }); $("#sparkline8 ").sparkline([2, 3], { type: "pie ", height: "140 ", sliceColors: ["#ed5565 ", "#F5F5F5 "] }) });
+ </script>-->
+	</body>
+
+	<!-- Mirrored from www.zi-han.net/theme/hplus/form_validate.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:16 GMT -->
+
+</html>

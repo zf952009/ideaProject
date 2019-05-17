@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.zi-han.net/theme/hplus/clients.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:44 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>H+ 后台主题UI框架 - 客户管理</title>
+
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+
+    <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.7/iconfont.css"/>
+
+
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <script type="text/javascript" src="js/common.js"></script>
+
+</head>
+
+<body class="gray-bg">
+<!--  <nav class="breadcrumb">
+  <i class="Hui-iconfont"  style=" font-size:25px">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 客户管理 <span class="c-gray en">&gt;</span> 客户主数据
+  <a  style=" float:right; margin-right:20px"  href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont"  style=" font-size:22px; font-weight:bold">&#xe68f;</i></a></nav>-->
+
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row " style=" padding-bottom:10px">
+
+        <div class="form-group">
+
+            <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">员工姓名：</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control"/>
+            </div>
+
+            <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">员工身份证：</label>
+            <div class="col-sm-4">
+                <div class="input-group">
+                    <select data-placeholder="选择用户组..." class="chosen-select" style="width: 230px; height: 30px"
+                            tabindex="2">
+                        <option value="">新增</option>
+                        <option value="110000" hassubinfo="true">变更</option>
+                        <option value="120000" hassubinfo="true">续签</option>
+                        <option value="120000" hassubinfo="true">解除</option>
+                    </select>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="row " style=" padding-bottom:10px">
+
+        <div class="form-group">
+
+            <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">公司培训成绩：</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control"/>
+            </div>
+
+            <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">结果：</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control"/>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="row " style=" padding-bottom:10px">
+
+        <div class="form-group">
+
+            <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">部门培训成绩：</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control"/>
+            </div>
+
+            <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">结果：</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control"/>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="row " style=" padding-bottom:10px">
+
+        <div class="form-group">
+
+            <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">班组培训成绩：</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control"/>
+            </div>
+
+            <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">结果：</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control"/>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="row " style=" padding-bottom:10px">
+
+        <div class="form-group">
+
+            <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">总体结果：</label>
+            <div class="col-sm-4">
+                <div class="input-group">
+                    <select data-placeholder="选择用户组..." class="chosen-select" style="width: 230px; height: 30px"
+                            tabindex="2">
+                        <option value="">通过</option>
+                        <option value="110000" hassubinfo="true">未通过</option>
+                    </select>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="row  pull-right" style=" padding-bottom:10px">
+        <div class="form-group">
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-1">
+                <button  onclick="hrefurl('sjaqjy.html')" class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"
+                        style=" text-align:right; margin-top:5px; padding-left:20px; padding-right:20px">
+                    <strong>提交</strong></button>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="js/plugins/jeditable/jquery.jeditable.js"></script>
+    <script src="js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script type="text/javascript" src="lib/layer/2.1/layer.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="lib/My97DatePicker/WdatePicker.js"></script>
+    <script src="js/content.min.js?v=1.0.0"></script>
+    <script>
+        $(document).ready(function () {
+            $(".dataTables-example").dataTable();
+            var oTable = $("#editable").dataTable();
+            oTable.$("td").editable("http://www.zi-han.net/theme/example_ajax.php", {
+                "callback": function (sValue, y) {
+                    var aPos = oTable.fnGetPosition(this);
+                    oTable.fnUpdate(sValue, aPos[0], aPos[1])
+                }, "submitdata": function (value, settings) {
+                    return {"row_id": this.parentNode.getAttribute("id"), "column": oTable.fnGetPosition(this)[2]}
+                }, "width": "90%", "height": "100%"
+            })
+        });
+        function fnClickAddRow() {
+            $("#editable").dataTable().fnAddData(["Custom row", "New row", "New row", "New row", "New row"])
+        }
+        ;
+    </script>
+
+    <script>
+        function member_add(title, url, w, h) {
+            layer_show(title, url, w, h);
+        }
+    </script>
+
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+</div>
+</body>
+</html>

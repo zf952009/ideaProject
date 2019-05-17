@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H+ 后台主题UI框架 - 客户管理</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.7/iconfont.css" />
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/plugins/chosen/chosen.css" rel="stylesheet">
+    <link href="css/plugins/colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+    <link href="css/plugins/cropper/cropper.min.css" rel="stylesheet">
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    <link href="css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+    <link href="css/plugins/nouslider/jquery.nouislider.css" rel="stylesheet">
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.css" rel="stylesheet">
+    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+    <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css"
+        rel="stylesheet">
+    <link href="css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+
+ <nav class="breadcrumb">
+    <i class="Hui-iconfont"  style=" font-size:25px">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 合同管理 <span class="c-gray en">&gt;</span> 劳务合同解除记录
+    <a  style=" float:right; margin-right:20px"  href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont"  style=" font-size:22px; font-weight:bold">&#xe68f;</i></a></nav>
+
+
+   <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title"  style=" padding-top:5px; padding-bottom:0px">
+                        <h5 style="  margin-top:10px">劳务合同解除记录 </h5>
+                        <span class="l"  style=" margin-left:20px"><a class="btn btn-primary radius" style=" height:30px;  "  data-title="添加解除记录" href="javascript:;"
+                onclick="member_add('添加解除记录','../admin/ActicleAdd.aspx?lanmu=1','','500')"><i class="Hui-iconfont">&#xe600;</i>
+                添加解除记录</a></span>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="table_data_tables.html#">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                           <!-- <ul class="dropdown-menu dropdown-user">
+                                <li><a href="table_data_tables.html#">品牌故事</a>
+                                </li>
+                                <li><a href="table_data_tables.html#">工程案例</a>
+                                </li>
+                                <li><a href="table_data_tables.html#">企业动态</a>
+                                </li>
+                                <li><a href="table_data_tables.html#">社会影响</a>
+                                </li>
+                            </ul>-->
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+
+                        <table class="table table-striped table-bordered table-hover dataTables-example">
+                            <thead>
+                                <tr>
+                                    <th>合同编号</th>
+                                    <th>员工编码</th>
+                                    <th>姓名</th>
+                                    <th>身份证号</th>
+                                    <th>合同解除时间</th>
+                                    <th>合同解除原因</th>
+
+                                    <th>有无经济补偿</th>
+                                    <th>档案维护期间</th>
+                                    <!--<th>试用期终止时间</th>
+                                    <th>试用期期限</th>
+                                    <th>工作单位</th>
+                                    <th>工作地点</th>
+                                    <th>工作制</th>-->
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="gradeX">
+                                    <td>100001</td>
+                                    <td>abcQWE123
+                                    </td>
+                                    <td>杨琦</td>
+                                    <td class="center">422202199811127030</td>
+                                    <td class="center">2016-11-12</td>
+                                    <td class="center">自愿离职</td>
+                                    <td class="center">无</td>
+                                    <td class="center">不可用</td>
+                                   <!-- <td class="center">2014-12-12</td>
+                                    <td class="center">1个月</td>
+                                    <td class="center">骏达暖通</td>
+                                    <td class="center">雄楚大街领秀城4栋1302</td>
+                                    <td class="center">标准计时工作制</td>-->
+                                      <td class="f-14 td-manage">
+                        
+                             <a style="text-decoration: none; margin-left: 10px"  class="btn btn-sm btn-primary  " onclick="member_add('查看简历','tjzh.html','600','600')"
+                                                                href="javascript:;" title="查看">查看</a>
+                                                            <a style="text-decoration: none; margin-left: 10px" class="btn btn-sm btn-warning  ">编辑</a>
+                                                            <!--<a style="text-decoration: none; margin-left:10px"  onclick="member_add('新增拜访记录','ActicleAdd.aspx?Id=1&lanmu=1','','500')"
+                                href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> -->
+                                                            <a style="text-decoration: none; margin-left: 10px" onclick="article_del(this,1)" class="btn btn-sm btn-danger  "
+                                                                href="javascript:;" title="删除">删除</a>
+                        </td>
+                                </tr>
+                               
+							   
+							   <tr class="gradeX">
+                                    <td>100033</td>
+                                    <td>ab123
+                                    </td>
+                                    <td>杨凯</td>
+                                    <td class="center">422202199811127030</td>
+                                    <td class="center">2016-11-12</td>
+                                    <td class="center">自愿离职</td>
+                                    <td class="center">无</td>
+                                    <td class="center">不可用</td>
+                                   <!-- <td class="center">2014-12-12</td>
+                                    <td class="center">1个月</td>
+                                    <td class="center">骏达暖通</td>
+                                    <td class="center">雄楚大街领秀城4栋1302</td>
+                                    <td class="center">标准计时工作制</td>-->
+                                      <td class="f-14 td-manage">
+                        
+                            <a style="text-decoration: none; margin-left: 10px"  class="btn btn-sm btn-primary  " onclick="member_add('查看简历','tjzh.html','600','600')"
+                                                                href="javascript:;" title="查看">查看</a>
+                                                            <a style="text-decoration: none; margin-left: 10px" class="btn btn-sm btn-warning  ">编辑</a>
+                                                            <!--<a style="text-decoration: none; margin-left:10px"  onclick="member_add('新增拜访记录','ActicleAdd.aspx?Id=1&lanmu=1','','500')"
+                                href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> -->
+                                                            <a style="text-decoration: none; margin-left: 10px" onclick="article_del(this,1)" class="btn btn-sm btn-danger  "
+                                                                href="javascript:;" title="删除">删除</a>
+                        </td>
+                                </tr>
+								
+								
+								<tr class="gradeX">
+                                    <td>100003</td>
+                                    <td>a222E123
+                                    </td>
+                                    <td>杨五</td>
+                                    <td class="center">422202199811127030</td>
+                                    <td class="center">2016-11-12</td>
+                                    <td class="center">自愿离职</td>
+                                    <td class="center">无</td>
+                                    <td class="center">可用</td>
+                                   <!-- <td class="center">2014-12-12</td>
+                                    <td class="center">1个月</td>
+                                    <td class="center">骏达暖通</td>
+                                    <td class="center">雄楚大街领秀城4栋1302</td>
+                                    <td class="center">标准计时工作制</td>-->
+                                      <td class="f-14 td-manage">
+                        
+                             <a style="text-decoration: none; margin-left: 10px"  class="btn btn-sm btn-primary  " onclick="member_add('查看简历','tjzh.html','600','600')"
+                                                                href="javascript:;" title="查看">查看</a>
+                                                            <a style="text-decoration: none; margin-left: 10px" class="btn btn-sm btn-warning  ">编辑</a>
+                                                            <!--<a style="text-decoration: none; margin-left:10px"  onclick="member_add('新增拜访记录','ActicleAdd.aspx?Id=1&lanmu=1','','500')"
+                                href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> -->
+                                                            <a style="text-decoration: none; margin-left: 10px" onclick="article_del(this,1)" class="btn btn-sm btn-danger  "
+                                                                href="javascript:;" title="删除">删除</a>
+                        </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <!--<tr>
+                                    <th>渲染引擎</th>
+                                    <th>浏览器</th>
+                                    <th>平台</th>
+                                    <th>引擎版本</th>
+                                    <th>CSS等级</th>
+                                    <th>操作</th>
+                                </tr>-->
+                            </tfoot>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+       
+        <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="js/content.min.js?v=1.0.0"></script>
+    <script src="js/plugins/jeditable/jquery.jeditable.js"></script>
+    <script src="js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script type="text/javascript" src="lib/layer/2.1/layer.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="lib/My97DatePicker/WdatePicker.js"></script>
+    <script src="js/plugins/chosen/chosen.jquery.js"></script>
+    <script>
+        $(document).ready(function () { $(".dataTables-example").dataTable(); var oTable = $("#editable").dataTable(); oTable.$("td").editable("http://www.zi-han.net/theme/example_ajax.php", { "callback": function (sValue, y) { var aPos = oTable.fnGetPosition(this); oTable.fnUpdate(sValue, aPos[0], aPos[1]) }, "submitdata": function (value, settings) { return { "row_id": this.parentNode.getAttribute("id"), "column": oTable.fnGetPosition(this)[2]} }, "width": "90%", "height": "100%" }) }); function fnClickAddRow() { $("#editable").dataTable().fnAddData(["Custom row", "New row", "New row", "New row", "New row"]) };
+    </script>
+
+    <script>
+        function member_add(title, url, w, h) {
+            layer_show(title, url, w, h);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html>
+<link rel="shortcut icon" href="favicon.ico">
+<link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+<link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+
+<link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.7/iconfont.css"/>
+
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Mirrored from www.zi-han.net/theme/hplus/clients.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:44 GMT -->
+<head>
+
+
+
+    <title>H+ 后台主题UI框架 - 权限管理管理</title>
+
+
+</head>
+
+<body class="gray-bg">
+<div class="col-sm-8">
+    <div id="treeview-checkable"></div>
+
+</div>
+<div class="col-sm-4">
+    <div><a class="btn btn-white btn-sm">全选</a></div>
+    <div><a class="btn btn-white btn-sm">反选</a></div>
+    <div><a class="btn btn-white btn-sm">取消</a></div>
+    <div><a class="btn btn-white btn-sm">提交</a></div>
+
+</div>
+</body>
+<script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js"></script>
+<script src="js/bootstrap-treeview.js"></script>
+<script>
+    $(function () {
+        var defaultData = [
+            {
+                text: '湖南啦啦公司',
+                href: '#parent1',
+                tags: ['4'],
+                nodes: [
+                    {
+                        text: '人事部',
+                        href: '#child1',
+                        tags: ['2'],
+                        nodes: [
+                            {
+                                text: '经理',
+                                href: '#grandchild1',
+                                tags: ['0']
+                            },
+                            {
+                                text: '职员',
+                                href: '#grandchild2',
+                                tags: ['0']
+                            }
+                        ]
+                    },
+                    {
+                        text: '财务部',
+                        href: '#child1',
+                        tags: ['2'],
+                        nodes: [
+                            {
+                                text: '主管',
+                                href: '#grandchild1',
+                                tags: ['0']
+                            },
+                            {
+                                text: '职员',
+                                href: '#grandchild2',
+                                tags: ['0']
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                text: '湖南拜拜公司',
+                href: '#parent1',
+                tags: ['4'],
+                nodes: [
+                    {
+                        text: '人事部',
+                        href: '#child1',
+                        tags: ['2'],
+                        nodes: [
+                            {
+                                text: '经理',
+                                href: '#grandchild1',
+                                tags: ['0']
+                            },
+                            {
+                                text: '职员',
+                                href: '#grandchild2',
+                                tags: ['0']
+                            }
+                        ]
+                    },
+                    {
+                        text: '财务部',
+                        href: '#child1',
+                        tags: ['2'],
+                        nodes: [
+                            {
+                                text: '主管',
+                                href: '#grandchild1',
+                                tags: ['0']
+                            },
+                            {
+                                text: '职员',
+                                href: '#grandchild2',
+                                tags: ['0']
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                text: '湖南试试公司',
+                href: '#parent1',
+                tags: ['4'],
+                nodes: [
+                    {
+                        text: '人事部',
+                        href: '#child1',
+                        tags: ['2'],
+                        nodes: [
+                            {
+                                text: '经理',
+                                href: '#grandchild1',
+                                tags: ['0']
+                            },
+                            {
+                                text: '职员',
+                                href: '#grandchild2',
+                                tags: ['0']
+                            }
+                        ]
+                    },
+                    {
+                        text: '财务部',
+                        href: '#child1',
+                        tags: ['2'],
+                        nodes: [
+                            {
+                                text: '主管',
+                                href: '#grandchild1',
+                                tags: ['0']
+                            },
+                            {
+                                text: '职员',
+                                href: '#grandchild2',
+                                tags: ['0']
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                text: '阿里巴巴',
+                href: '#parent4',
+                tags: ['0']
+            },
+            {
+                text: '腾讯',
+                href: '#parent5'  ,
+                tags: ['0']
+            }
+        ];
+
+        var $checkableTree = $('#treeview-checkable').treeview({
+            data: defaultData,
+            showIcon: false,
+            showCheckbox: true,
+            onNodeChecked: function(event, node) {
+                $('#checkable-output').prepend('<p>' + node.text + ' was checked</p>');
+            },
+            onNodeUnchecked: function (event, node) {
+                $('#checkable-output').prepend('<p>' + node.text + ' was unchecked</p>');
+            }
+        });
+
+        var findCheckableNodess = function() {
+            return $checkableTree.treeview('search', [ $('#input-check-node').val(), { ignoreCase: false, exactMatch: false } ]);
+        };
+        var checkableNodes = findCheckableNodess();
+
+        // Check/uncheck/toggle nodes
+        $('#input-check-node').on('keyup', function (e) {
+            checkableNodes = findCheckableNodess();
+            $('.check-node').prop('disabled', !(checkableNodes.length >= 1));
+        });
+
+        $('#btn-check-node.check-node').on('click', function (e) {
+            $checkableTree.treeview('checkNode', [ checkableNodes, { silent: $('#chk-check-silent').is(':checked') }]);
+        });
+
+        $('#btn-uncheck-node.check-node').on('click', function (e) {
+            $checkableTree.treeview('uncheckNode', [ checkableNodes, { silent: $('#chk-check-silent').is(':checked') }]);
+        });
+
+        $('#btn-toggle-checked.check-node').on('click', function (e) {
+            $checkableTree.treeview('toggleNodeChecked', [ checkableNodes, { silent: $('#chk-check-silent').is(':checked') }]);
+        });
+
+        // Check/uncheck all
+        $('#btn-check-all').on('click', function (e) {
+            $checkableTree.treeview('checkAll', { silent: $('#chk-check-silent').is(':checked') });
+        });
+
+        $('#btn-uncheck-all').on('click', function (e) {
+            $checkableTree.treeview('uncheckAll', { silent: $('#chk-check-silent').is(':checked') });
+        });
+    });
+
+</script>
+</html>

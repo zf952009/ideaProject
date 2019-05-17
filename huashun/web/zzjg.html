@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.zi-han.net/theme/hplus/clients.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:44 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>H+ 后台主题UI框架 - 客户管理</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.7/iconfont.css" />
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="lib/zTree/v3/css/zTreeStyle/zTreeStyle.css" type="text/css">
+</head>
+
+<body class="gray-bg">
+    <nav class="breadcrumb">
+    <i class="Hui-iconfont"  style=" font-size:25px">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 系统设置 <span class="c-gray en">&gt;</span> 组织架构
+    <a  style=" float:right; margin-right:20px"  href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont"  style=" font-size:22px; font-weight:bold">&#xe68f;</i></a></nav>
+
+
+
+    <div class="wrapper wrapper-content animated fadeInRight" >
+    <table class="table">
+	<tr>
+		<td width="200"   style=" background-color:#fff;  vertical-align:top"><ul id="treeDemo" class="ztree"  style=" margin-top:0px"></ul></td>
+		<td class="va-t"><IFRAME ID="testIframe" Name="testIframe" FRAMEBORDER=0 SCROLLING=AUTO width=100%  height=700px SRC="teams_board.html"></IFRAME></td>
+	</tr>
+</table>
+    </div>
+      <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+
+    <script type="text/javascript" src="lib/layer/2.1/layer.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <script src="js/content.min.js?v=1.0.0"></script>
+    <script type="text/javascript" src="lib/zTree/v3/js/jquery.ztree.all-3.5.min.js"></script>
+
+
+
+    <script type="text/javascript">
+        var setting = {
+            view: {
+                dblClickExpand: false,
+                showLine: false,
+                selectedMulti: false
+            },
+            data: {
+                simpleData: {
+                    enable: true,
+                    idKey: "id",
+                    pIdKey: "pId",
+                    rootPId: ""
+                }
+            },
+            callback: {
+                beforeClick: function (treeId, treeNode) {
+                    var zTree = $.fn.zTree.getZTreeObj("tree");
+                    if (treeNode.isParent) {
+                        zTree.expandNode(treeNode);
+                        return false;
+                    } else {
+
+                        demoIframe.attr("src", treeNode.name + ".html");
+
+                       return true;
+                    }
+                }
+            }
+        };
+
+        var zNodes = [
+	{ id: 1, pId: 0, name: "湖南华顺", open: true },
+	{ id: 11, pId: 1, name: "市场部" },
+	{ id: 111, pId: 11, name: "市场部一" },
+	{ id: 112, pId: 11, name: "市场部二" },
+    { id: 112, pId: 11, name: "市场部三" },
+	{ id: 12, pId: 1, name: "后勤部" },
+    { id: 112, pId: 11, name: "后勤部一" },
+    { id: 112, pId: 11, name: "后勤部二" },
+];
+
+        var code;
+
+        function showCode(str) {
+            if (!code) code = $("#code");
+            code.empty();
+            code.append("<li>" + str + "</li>");
+        }
+
+        $(document).ready(function () {
+            var t = $("#treeDemo");
+            t = $.fn.zTree.init(t, setting, zNodes);
+            demoIframe = $("#testIframe");
+            demoIframe.bind("load", loadReady);
+            var zTree = $.fn.zTree.getZTreeObj("tree");
+            zTree.selectNode(zTree.getNodeByParam("id", '11'));
+        });
+</script>
+    </body>
+    </html>
+﻿<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.zi-han.net/theme/hplus/clients.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:44 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>H+ 后台主题UI框架 - 客户管理</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.7/iconfont.css" />
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="lib/zTree/v3/css/zTreeStyle/zTreeStyle.css" type="text/css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.7/iconfont.css" />
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="css/plugins/jsTree/style.min.css" />-->
+    <link rel="stylesheet" href="lib/zTree/v3/css/zTreeStyle/zTreeStyle.css" type="text/css">
+</head>
+
+<body class="gray-bg">
+    <nav class="breadcrumb">
+    <i class="Hui-iconfont"  style=" font-size:25px">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 招聘管理 <span class="c-gray en">&gt;</span> 面试
+    <a  style=" float:right; margin-right:20px"  href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont"  style=" font-size:22px; font-weight:bold">&#xe68f;</i></a></nav>
+
+
+
+    <div class="wrapper wrapper-content animated fadeInRight" >
+    <table class="table">
+	<tr>
+		<td width="200"   style=" background-color:#fff;  vertical-align:top"><ul id="treeDemo" class="ztree"  style=" margin-top:0px"></ul></td>
+		<td class="va-t"><IFRAME ID="testIframe" Name="testIframe" FRAMEBORDER=0 SCROLLING=AUTO width=100%  height=700px SRC="teams_board.html"></IFRAME></td>
+	</tr>
+</table>
+    </div>
+      <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+
+    <script type="text/javascript" src="lib/layer/2.1/layer.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <script src="js/content.min.js?v=1.0.0"></script>
+    <script type="text/javascript" src="lib/zTree/v3/js/jquery.ztree.all-3.5.min.js"></script>
+
+
+
+    <script type="text/javascript">
+        var setting = {
+            view: {
+                dblClickExpand: false,
+                showLine: false,
+                selectedMulti: false
+            },
+            data: {
+                simpleData: {
+                    enable: true,
+                    idKey: "id",
+                    pIdKey: "pId",
+                    rootPId: ""
+                }
+            },
+            callback: {
+                beforeClick: function (treeId, treeNode) {
+                    var zTree = $.fn.zTree.getZTreeObj("tree");
+                    if (treeNode.isParent) {
+                        zTree.expandNode(treeNode);
+                        return false;
+                    } else {
+
+                        demoIframe.attr("src", treeNode.name + ".html");
+
+
+
+                        return true;
+                    }
+                }
+            }
+        };
+
+        var zNodes = [
+	{ id: 1, pId: 0, name: "湖南华顺", open: true },
+	{ id: 11, pId: 1, name: "市场部" },
+	{ id: 111, pId: 11, name: "市场部一" },
+	{ id: 112, pId: 11, name: "市场部二" },
+	{ id: 113, pId: 11, name: "市场部三" },
+	{ id: 12, pId: 1, name: "后勤部" },
+	{ id: 121, pId: 12, name: "后勤部一" },
+	{ id: 122, pId: 12, name: "后勤部二" },
+];
+
+        var code;
+
+        function showCode(str) {
+            if (!code) code = $("#code");
+            code.empty();
+            code.append("<li>" + str + "</li>");
+        }
+
+        $(document).ready(function () {
+            var t = $("#treeDemo");
+            t = $.fn.zTree.init(t, setting, zNodes);
+            demoIframe = $("#testIframe");
+            demoIframe.bind("load", loadReady);
+            var zTree = $.fn.zTree.getZTreeObj("tree");
+            zTree.selectNode(zTree.getNodeByParam("id", '11'));
+        });
+</script>
+    </body>
+    </html>
+
+		<script src="js/jquery.min.js?v=2.1.4"></script>
+		<script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+		<script type="text/javascript" src="lib/layer/2.1/layer.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+
+		<script src="js/content.min.js?v=1.0.0"></script>
+		<!--<script src="js/plugins/jsTree/jstree.min.js" type="text/javascript" charset="utf-8"></script>-->
+		<script type="text/javascript" src="lib/zTree/v3/js/jquery.ztree.all-3.5.min.js"></script>
+
+
+		<script type="text/javascript">
+			var setting = {
+				view: {
+					dblClickExpand: false,
+					showLine: false,
+					selectedMulti: false
+				},
+				data: {
+					simpleData: {
+						enable: true,
+						idKey: "id",
+						pIdKey: "pId",
+						rootPId: ""
+					}
+				},
+				callback: {
+					beforeClick: function(treeId, treeNode) {
+						var zTree = $.fn.zTree.getZTreeObj("tree");
+						if(treeNode.isParent) {
+							zTree.expandNode(treeNode);
+							return false;
+						} else {
+
+							demoIframe.attr("src", treeNode.name + ".html");
+
+							return true;
+						}
+					}
+				}
+			};
+
+			var zNodes = [{
+				id: 1,
+				pId: 0,
+				name: "湖南华顺",
+				open: true,
+				iconOpen:"lib/zTree/v3/css/zTreeStyle/img/diy/1_o.png", iconClose:"lib/zTree/v3/css/zTreeStyle/img/diy/1_x.png"
+			}, {
+				id: 11,
+				pId: 1,
+				name: "市场部",
+				iconOpen:"lib/zTree/v3/css/zTreeStyle/img/diy/1_o.png", iconClose:"lib/zTree/v3/css/zTreeStyle/img/diy/1_x.png"
+			}, {
+				id: 111,
+				pId: 11,
+				name: "市场部一",
+				icon:"lib/zTree/v3/css/zTreeStyle/img/diy/e.png"
+			}, {
+				id: 112,
+				pId: 11,
+				name: "市场部二",
+				icon:"lib/zTree/v3/css/zTreeStyle/img/diy/e.png"
+			}, {
+				id: 113,
+				pId: 11,
+				name: "市场部三",
+				icon:"lib/zTree/v3/css/zTreeStyle/img/diy/e.png"
+			}, {
+				id: 12,
+				pId: 1,
+				name: "后勤部",
+				iconOpen:"lib/zTree/v3/css/zTreeStyle/img/diy/1_o.png", iconClose:"lib/zTree/v3/css/zTreeStyle/img/diy/1_x.png"
+			}, {
+				id: 121,
+				pId: 12,
+				name: "后勤部一",
+				icon:"lib/zTree/v3/css/zTreeStyle/img/diy/e.png"
+			}, {
+				id: 122,
+				pId: 12,
+				name: "后勤部二",
+				icon:"lib/zTree/v3/css/zTreeStyle/img/diy/e.png"
+			}, ];
+
+			var code;
+
+			function showCode(str) {
+				if(!code) code = $("#code");
+				code.empty();
+				code.append("<li>" + str + "</li>");
+			}
+
+			$(document).ready(function() {
+				var t = $("#treeDemo");
+				t = $.fn.zTree.init(t, setting, zNodes);
+				demoIframe = $("#testIframe");
+				demoIframe.bind("load", loadReady);
+				var zTree = $.fn.zTree.getZTreeObj("tree");
+				zTree.selectNode(zTree.getNodeByParam("id", '11'));
+			});
+		</script>
+	</body>
+
+</html>

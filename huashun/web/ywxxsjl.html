@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.zi-han.net/theme/hplus/clients.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:44 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>H+ 后台主题UI框架 - 客户管理</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.7/iconfont.css" />
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+<nav class="breadcrumb">
+    <i class="Hui-iconfont"  style=" font-size:25px">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 意外享受管理 <span class="c-gray en">&gt;</span> 商保享受管理
+    <a  style=" float:right; margin-right:20px"  href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont"  style=" font-size:22px; font-weight:bold">&#xe68f;</i></a></nav>
+
+<div class="ibox-content">
+    <form class="form-horizontal m-t" id="commentForm">
+        <table border="0" cellspacing="" cellpadding="" style=" border-collapse: separate; border-spacing: 10px; width: 100%;" class="mytable">
+            <tr>
+                <td class="labelleft">编码：</td>
+                <td><input id="" name="name" minlength="2" type="text" class="form-control" required="" aria-required="true"></td>
+                <td class="labelleft">事故发生日期：</td>
+                <td><input id="" name="name" minlength="2" type="text" class="form-control" required="" aria-required="true"></td>
+                <td class="labelleft">就诊方式：</td>
+                <td><input id="" name="name" minlength="2" type="text" class="form-control" required="" aria-required="true"></td>
+                <td class="labelleft">就诊医院：</td>
+                <td><input id="" name="name" minlength="2" type="text" class="form-control" required="" aria-required="true"></td>
+            </tr>
+            <tr>
+                <td class="labelleft">录入日期：</td>
+                <td>
+                    <textarea name="" class="form-control" rows="1" cols=""></textarea>
+                </td>
+                <td class="labelleft">资料提交日期：</td>
+                <td><textarea name="" class="form-control" rows="1" cols=""></textarea></td>
+                <td class="labelleft">赔付类别：</td>
+                <td><textarea name="" class="form-control" rows="1" cols=""></textarea></td>
+                <td class="labelleft">赔付金额：</td>
+                <td><textarea name="" class="form-control" rows="1" cols=""></textarea></td>
+
+            </tr>
+            <tr>
+
+            </tr>
+            <tr>
+                <td colspan="8">
+                    <hr />
+                    <button class="btn btn-sm btn-primary pull-right" type="submit">添加</button>
+                </td>
+
+            </tr>
+        </table>
+
+    </form>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight" >
+
+    <div class="row "  style=" padding-bottom:10px">
+
+
+
+    </div>
+
+
+
+    <div class="row" style=" ">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title"  style=" padding-top:5px; padding-bottom:0px">
+                    <h5 style="  margin-top:10px">意外险享受记录</h5>
+
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="table_data_tables.html#">
+                            <i class="fa fa-wrench"></i>
+                        </a>
+
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div>
+                        <a onclick="alert('确认删除?')" class="btn btn-sm btn-primary"><i class=""></i> 删除</a>
+
+                        <a  class="btn btn-sm btn-primary"><i class=""></i>导出</a>
+                         <a style="text-decoration: none; margin-left: 10px" class="btn btn-sm btn-primary  "
+                                   onclick="member_add('查看简历','tjzh.html','600','600')"
+                                   href="javascript:;" title="查看">查看</a>
+                                <a style="text-decoration: none; margin-left: 10px"
+                                   class="btn btn-sm btn-warning  ">编辑</a>
+
+                    </div>
+                    <table class="table table-striped table-bordered table-hover ">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th>编码</th>
+                            <th>事故发生日期</th>
+                            <th>就诊方式</th>
+                            <th>就诊医院</th>
+                            <th>录入日期</th>
+                            <th>资料提交日期</th>
+                            <th>赔付类别</th>
+                            <th>赔付金额</th>
+
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="gradeX">
+                            <td><input type="checkbox"></td>
+                            <td>HS04-ZP-06</td>
+                            <td>2016-1-1</td>
+                            <td>送医</td>
+                            <td class="center">协和医院</td>
+                            <td class="center">2016-1-1</td>
+                            <td class="center">2016-12-12</td>
+                            <td class="center">赔付类别</td>
+                            <td>20000</td>
+                            <td class="f-14 td-manage">
+                               
+                                <!--<a style="text-decoration: none; margin-left:10px"  onclick="member_add('新增拜访记录','ActicleAdd.aspx?Id=1&lanmu=1','','500')"
+    href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> -->
+
+                            </td>
+                        </tr>
+
+                        <tr class="gradeX">
+                            <td><input type="checkbox"></td>
+                            <td>HS04-ZP-06</td>
+                            <td>2017-1-1</td>
+                            <td>救护车</td>
+                            <td class="center">荣军医院</td>
+                            <td class="center">2016-1-1</td>
+                            <td class="center">2016-12-12</td>
+                            <td class="center">赔付类别</td>
+                            <td>20000</td>
+                            <td class="f-14 td-manage">
+                                <!--<a style="text-decoration: none; margin-left: 10px" class="btn btn-sm btn-primary  "
+                                   onclick="member_add('查看简历','tjzh.html','600','600')"
+                                   href="javascript:;" title="查看">查看</a>
+                                <a style="text-decoration: none; margin-left: 10px"
+                                   class="btn btn-sm btn-warning  ">编辑</a>-->
+                                <!--<a style="text-decoration: none; margin-left:10px"  onclick="member_add('新增拜访记录','ActicleAdd.aspx?Id=1&lanmu=1','','500')"
+    href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> -->
+
+                            </td>
+                        </tr>
+
+                        <tr class="gradeX">
+                            <td><input type="checkbox"></td>
+                            <td>HS04-ZP-06</td>
+                            <td>2018-1-1</td>
+                            <td>送医</td>
+                            <td class="center">人民医院</td>
+                            <td class="center">2016-1-1</td>
+                            <td class="center">2016-12-12</td>
+                            <td class="center">赔付类别</td>
+                            <td>20000</td>
+                            <td class="f-14 td-manage">
+                                <!--<a style="text-decoration: none; margin-left: 10px" class="btn btn-sm btn-primary  "
+                                   onclick="member_add('查看简历','tjzh.html','600','600')"
+                                   href="javascript:;" title="查看">查看</a>
+                                <a style="text-decoration: none; margin-left: 10px"
+                                   class="btn btn-sm btn-warning  ">编辑</a>-->
+                                <!--<a style="text-decoration: none; margin-left:10px"  onclick="member_add('新增拜访记录','ActicleAdd.aspx?Id=1&lanmu=1','','500')"
+    href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> -->
+
+                            </td>
+                        </tr>
+
+                        </tbody>
+                        <tfoot>
+
+                        </tfoot>
+                    </table>
+                    <div class="row">
+                        <div class="col-sm-9"></div>
+                        <div class="col-sm-3">
+                            <ul class="pager">
+                                <li><a href="#">首页</a></li>
+                                <li><a href="#">上一页</a></li>
+                                <li><a href="#">下一页</a></li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="js/jquery.min.js?v=2.1.4"></script>
+<script src="js/bootstrap.min.js?v=3.3.6"></script>
+<script src="js/plugins/jeditable/jquery.jeditable.js"></script>
+<script src="js/plugins/dataTables/jquery.dataTables.js"></script>
+<script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+<script type="text/javascript" src="lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="lib/My97DatePicker/WdatePicker.js"></script>
+<script src="js/content.min.js?v=1.0.0"></script>
+<script>
+    $(document).ready(function () { $(".dataTables-example").dataTable(); var oTable = $("#editable").dataTable(); oTable.$("td").editable("http://www.zi-han.net/theme/example_ajax.php", { "callback": function (sValue, y) { var aPos = oTable.fnGetPosition(this); oTable.fnUpdate(sValue, aPos[0], aPos[1]) }, "submitdata": function (value, settings) { return { "row_id": this.parentNode.getAttribute("id"), "column": oTable.fnGetPosition(this)[2]} }, "width": "90%", "height": "100%" }) }); function fnClickAddRow() { $("#editable").dataTable().fnAddData(["Custom row", "New row", "New row", "New row", "New row"]) };
+</script>
+
+<script>
+    function member_add(title, url, w, h) {
+        layer_show(title, url, w, h);
+    }
+</script>
+
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+</div>  </body>
+</html>

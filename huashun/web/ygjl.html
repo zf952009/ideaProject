@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+D:\IDEA_workspace\com.huashunsap\web\lib\My97DatePicker\WdatePicker.js
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H+ 后台主题UI框架 - 客户管理</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.7/iconfont.css" />
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/plugins/chosen/chosen.css" rel="stylesheet">
+    <link href="css/plugins/colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+    <link href="css/plugins/cropper/cropper.min.css" rel="stylesheet">
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    <link href="css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+    <link href="css/plugins/nouslider/jquery.nouislider.css" rel="stylesheet">
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.css" rel="stylesheet">
+    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+    <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
+    <style>
+    .tbxx tr {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    
+    .tbxx td {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .form-group {
+        height: 40px
+    }
+    
+    .labelleft {
+        width: 100px;
+        text-align: left;
+        font-weight: bold;
+    }
+    .conright{
+        width: 350px
+    }
+    .jlwrapper td {
+        padding: 10px
+    }
+    </style>
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+ 
+        <div class="">
+            <!--<ul class="nav nav-pills">
+                <li class="active"><a data-toggle="tab" href="#tab-1" aria-expanded="true">基础信息</a>
+                </li>
+                <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false">学历信息</a> </li>
+                <li class=""><a data-toggle="tab" href="#tab-3" aria-expanded="false">户籍信息</a> </li>
+                <li class=""><a data-toggle="tab" href="#tab-4" aria-expanded="false">求职信息</a> </li>
+                <li class=""><a data-toggle="tab" href="#tab-5" aria-expanded="false">家庭成员</a> </li>
+            </ul>-->
+            <div class="jlwrapper" style="background: #fff;padding: 20px;max-width:1200px">
+                <table>
+                    <tr id="tab-1">
+                        <td class="labelleft">
+                            姓名
+                        </td>
+                        <td class="conright">
+                            <input type="email" class="form-control" id="" placeholder="姓名">
+                        </td>
+                        <td class="labelleft">
+                            姓别
+                        </td>
+                        <td class="conright">
+                            <div class="radio radio-info radio-inline">
+                                <input type="radio" id="inlineRadio13" value="option1" name="radioInline" checked="">
+                                <label for="inlineRadio13">
+                                    男
+                                </label>
+                            </div>
+                            <div class="radio radio-inline">
+                                <input type="radio" id="inlineRadio23" value="option2" name="radioInline">
+                                <label for="inlineRadio23">
+                                    女
+                                </label>
+                            </div>
+                        </td>
+                        <td class="labelleft">
+                            婚否
+                        </td>
+                        <td class="conright">
+                            <div class="radio radio-info radio-inline">
+                                <input type="radio" id="inlineRadio123" value="option1" name="radioInline" checked="">
+                                <label for="inlineRadio123">
+                                    是
+                                </label>
+                            </div>
+                            <div class="radio radio-inline">
+                                <input type="radio" id="inlineRadio223" value="option2" name="radioInline">
+                                <label for="inlineRadio223">
+                                    否
+                                </label>
+                            </div>
+                        </td>
+                        <td rowspan="4">
+                        	<img src="img/djz.jpg" style="width: 150px;height: 200px" />
+                        </td>
+                    </tr>
+                    <tr id="tab-2">
+                        <td class="labelleft">
+                            学历
+                        </td>
+                        <td class="conright">
+                            <input type="email" class="form-control" id="" placeholder="学历">
+                        </td>
+                        <td class="labelleft">
+                            名族
+                        </td>
+                        <td class="conright">
+                            <input type="email" class="form-control" id="" placeholder="名族">
+                        </td>
+                        <td class="labelleft">
+                            视力
+                        </td>
+                        <td class="conright">
+                            <input type="email" class="form-control" id="" placeholder="视力">
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="labelleft">
+                            政治面貌
+                        </td>
+                        <td class="conright">
+                             <select data-placeholder="选择政治面貌..." class="chosen-select form-control" style="width: 100%" tabindex="2">
+                                        <option value="">请选择政治面貌</option>
+                                        <option value="110000" hassubinfo="true">群众</option>
+                                        <option value="120000" hassubinfo="true">团员</option>
+                                        <option value="130000" hassubinfo="true">党员</option>
+                                    </select>
+                        </td>
+                        <td class="labelleft">
+                           专业
+                        </td>
+                        <td class="conright">
+                            <input type="email" class="form-control" id="" placeholder="专业">
+                        </td>
+                        <td class="labelleft">
+                            身高
+                        </td>
+                        <td class="conright">
+                            <input type="email" class="form-control" id="" placeholder="身高">
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="labelleft">
+                            联系方式
+                        </td>
+                        <td class="conright">
+                              <input type="email" class="form-control" id="" placeholder="身高">
+                        </td>
+                        <td class="labelleft">
+                           紧急联系方式
+                        </td>
+                        <td class="conright">
+                            <input type="email" class="form-control" id="" placeholder="紧急联系方式">
+                        </td>
+                        <td class="labelleft">
+                            学历
+                        </td>
+                        <td class="conright">
+                            <select data-placeholder="选择政治面貌..." class="chosen-select form-control" style="width: 100%" tabindex="2">
+                                        <option value="">请选择学历</option>
+                                        <option value="110000" hassubinfo="true">初中</option>
+                                        <option value="120000" hassubinfo="true">中专</option>
+                                        <option value="130000" hassubinfo="true">高中</option>
+                                        <option value="140000" hassubinfo="true">专科</option>
+                                        <option value="150000" hassubinfo="true">本科</option>
+                                        <option value="210000" hassubinfo="true">研究生</option>
+                                        <option value="220000" hassubinfo="true">博士生</option>
+                                    </select>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td class="labelleft">
+                    	毕业院校
+                    	</td>
+                    	<td colspan="3">
+                    		 <input type="email" class="form-control" id="" placeholder="毕业院校">
+                    	</td>
+                    	<td class="labelleft">
+                    省份证号
+                    	</td>
+                    	<td class="conright">
+                    		 <input type="email" class="form-control" id="" placeholder="省份证号">
+                    	</td>
+                    </tr>
+                    <tr>
+                    	<td class="labelleft">
+                    	户籍地址
+                    	</td>
+                    	<td colspan="3">
+                    		 <input type="email" class="form-control" id="" placeholder="户籍地址">
+                    	</td>
+                    	<td class="labelleft">
+                    	现居地址
+                    	</td>
+                    	<td colspan="3">
+                    		 <input type="email" class="form-control" id="" placeholder="现居地址">
+                    	</td>
+                    </tr>
+                    <tr>
+                    	 <td class="labelleft">
+                            是否有技能
+                        </td>
+                        <td class="conright">
+                            <div class="radio radio-info radio-inline">
+                                <input type="radio" id="inlineRadio14" value="option1" name="radioInline33" checked="">
+                                <label for="inlineRadio14">
+                                    是
+                                </label>
+                            </div>
+                            <div class="radio radio-inline">
+                                <input type="radio" id="inlineRadio24" value="option2" name="radioInline33">
+                                <label for="inlineRadio24">
+                                    否
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                    	<td class="labelleft">
+                            求职单位：
+                        </td>
+                        <td colspan="6">
+                            <input type="email" class="form-control" id="" placeholder="求职单位">
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td class="labelleft">
+                            求职内容：
+                        </td>
+                        <td colspan="6">
+                            <textarea class="form-control" required="" rows="6" style="width: 100%;"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td class="labelleft">
+                            是否属于特殊人员，请在对应框内划"√"：
+                        </td>
+                        <td colspan="6">
+                            <div class="checkbox checkbox-inline">   
+                            	<input type="checkbox"  value="option2" name="checkbox" id="num1">
+                                <label for="num1">
+                                	
+                                    1.农民工
+                                </label>
+                                
+                            </div>
+                            <div class="checkbox checkbox-inline">   
+                            	<input type="checkbox"  value="option2" name="checkbox1" id="num2">
+                            	
+                                <label for="num2">
+                                	
+                                    2.4050人员
+                                </label>
+                                
+                            </div>
+                            <div class="checkbox checkbox-inline">   
+                            	<input type="checkbox"  value="option2" name="checkbox1" id="num3">
+                            
+                                <label for="num3">
+                                	
+                                    3.零就业家庭
+                                </label>
+                                
+                            </div>
+                            <div class="checkbox checkbox-inline">   
+                            	<input type="checkbox"  value="option2" name="checkbox1" id="num4">
+                            
+                                <label for="num4">
+                                	
+                                    4.享受低保
+                                </label>
+                                
+                            </div>
+                            <div class="checkbox checkbox-inline">   
+                            	<input type="checkbox"  value="option2" name="checkbox1" id="num5">
+                            
+                                <label for="num5">
+                                	
+                                    5.残疾人
+                                </label>
+                                
+                            </div>
+                            <div class="checkbox checkbox-inline">   
+                            	<input type="checkbox"  value="option2" name="checkbox1" id="num6">
+                            
+                                <label for="num6">
+                                	
+                                    6.失地农民
+                                </label>
+                                
+                            </div>
+                            <div class="checkbox checkbox-inline">   
+                            	<input type="checkbox"  value="option2" name="checkbox1" id="num7">
+                            
+                                <label for="num7">
+                                	
+                                    7.退伍军人
+                                </label>
+                                
+                            </div>
+                            <div class="checkbox checkbox-inline">   
+                            	<input type="checkbox"  value="option2" name="checkbox1" id="num8">
+                            
+                                <label for="num8">
+                                	
+                                    8.市州级劳模
+                                </label>
+                                
+                            </div>
+                            <div class="checkbox checkbox-inline">   
+                            	<input type="checkbox"  value="option2" name="checkbox1" id="num9">
+                            
+                                <label for="num9">
+                                	
+                                    9.烈士家属
+                                </label>
+                                
+                            </div>
+                            <div class="checkbox checkbox-inline">   
+                            	<input type="checkbox"  value="option2" name="checkbox1" id="num10">
+                            
+                                <label for="num10">
+                                	
+                                    10.单亲家庭
+                                </label>
+                                
+                            </div>
+                            <div class="checkbox checkbox-inline">   
+                            	<input type="checkbox"  value="option2" name="checkbox1" id="num11">
+                            
+                                <label for="num11">
+                                	
+                                    11.连续失业1年以上人员
+                                </label>
+                                
+                            </div>
+                            <div class="checkbox checkbox-inline">   
+                            	<input type="checkbox"  value="option2" name="checkbox1" id="num12">
+                            
+                                <label for="num12">
+                                	
+                                    12.就业困难大学生（大专以上）近3年内未就业
+                                </label>
+                                
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td class="labelleft">
+                            家庭主要成员：
+                        </td>
+                        <td colspan="6">
+                    	<table border="1" cellspacing="" cellpadding="">
+                    		<tr><td style="width: 100px;">姓名</td><td style="width: 80px;">关系</td><td style="width: 80px;">年龄</td><td>住址</td><td style="width: 110px;">联系电话</td></tr>
+                    		<tr><td><input type="email" class="form-control" id="" placeholder="姓名"></td>
+                    			<td><input type="email" class="form-control" id="" placeholder="关系"></td>
+                    			<td><input type="email" class="form-control" id="" placeholder="年龄"></td>
+                    			<td><input type="email" class="form-control" id="" placeholder="住址"></td>
+                    			<td><input type="email" class="form-control" id="" placeholder="联系电话"></td></tr>
+                    			<tr><td><input type="email" class="form-control" id="" placeholder="姓名"></td>
+                    			<td><input type="email" class="form-control" id="" placeholder="关系"></td>
+                    			<td><input type="email" class="form-control" id="" placeholder="年龄"></td>
+                    			<td><input type="email" class="form-control" id="" placeholder="住址"></td>
+                    			<td><input type="email" class="form-control" id="" placeholder="联系电话"></td></tr>
+                    			<tr><td><input type="email" class="form-control" id="" placeholder="姓名"></td>
+                    			<td><input type="email" class="form-control" id="" placeholder="关系"></td>
+                    			<td><input type="email" class="form-control" id="" placeholder="年龄"></td>
+                    			<td><input type="email" class="form-control" id="" placeholder="住址"></td>
+                    			<td><input type="email" class="form-control" id="" placeholder="联系电话"></td></tr>
+                    	</table>
+                    	</td>
+                    </tr>
+                    <tr>
+                    	<td class="labelleft">
+                            学习和工作简历：
+                        </td>
+                        <td colspan="6">
+                            <textarea class="form-control" required="" rows="6" style="width: 100%;"></textarea>
+                        </td>
+                    </tr>
+                </table>
+				<a class="btn btn-sm btn-info pull-right" onclick="history.back(-1)">返回</a>
+               
+            </div>
+            
+          
+        </div>
+    </div>
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="js/content.min.js?v=1.0.0"></script>
+    <script src="js/plugins/jeditable/jquery.jeditable.js"></script>
+    <script src="js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script type="text/javascript" src="lib/layer/2.1/layer.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="lib/My97DatePicker/WdatePicker.js"></script>
+    <script src="js/plugins/chosen/chosen.jquery.js"></script>
+</body>
+
+</html>

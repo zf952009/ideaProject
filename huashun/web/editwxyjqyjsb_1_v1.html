@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html>
+<!-- Mirrored from www.zi-han.net/theme/hplus/form_basic.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:15 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H+ 后台主题UI框架 - 基本表单</title>
+    <meta name="keywords" content="H+后台主题,后台bootstrap框架,会员中心主题,后台HTML,响应式后台">
+    <meta name="description" content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="js/content.min.js?v=1.0.0"></script>
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script type="text/javascript" language="javascript" src="js/JYH.Linkage.js"></script>
+    <script type="text/javascript" language="javascript" src="js/JYH.AreaList.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            JYH.Linkage.DropProvince = $("#drpProvince");
+            JYH.Linkage.DropCity = $("#drpCity");
+            JYH.Linkage.DropArea = $("#drpArea");
+            JYH.Linkage.Controls = {
+                bindAreaDrop: function (drop, areaList, allText) {
+                    drop.empty();
+                    drop.append("<option value=\"0\">" + allText + "</option>");
+                    var areaOther = null;
+                    $.each(areaList, function (i, area) {
+                        if (area.c == "0.00")
+                            return;
+                        if (area.n.indexOf("其它") > -1 || area.n.indexOf("其他") > -1) {
+                            areaOther = area;
+                            return;
+                        }
+                        drop.append("<option value=\"" + area.i + "\">" + (area.cp == "1" ? "* " : "  ") + area.n + "</option>");
+                    });
+                    if (areaOther) {
+                        drop.append("<option value=\"" + areaOther.i + "\">" + (areaOther.cp == "1" ? "* " : "  ") + areaOther.n + "</option>");
+                    }
+                },
+                SetTableEmpty: function () {
+                    $("#content").html('');
+                    $("#content").append("<tr><td width=\"122\" valign=\"middle\" style=\"background:#EFEEEE; height: 30px; font-size: 16px;color: #666; font-weight: bold;\">省" +
+                            "</td>" +
+                            "<td width=\"123\" valign=\"middle\" style=\"background: #EFEEEE; height: 30px; font-size: 16px;color: #666; font-weight: bold;\">" +
+                            "市</td>" +
+                            "<td width=\"118\" valign=\"middle\" style=\"background: #EFEEEE; height: 30px; font-size: 16px;color: #666; font-weight: bold;\">" +
+                            "县/区</td>" +
+                            "<td width=\"356\" valign=\"middle\" style=\"background: #EFEEEE; height: 30px; font-size: 16px;color: #666; font-weight: bold;\">" +
+                            "服务说明</td>" +
+                            "<td width=\"101\" valign=\"middle\" style=\"background: #EFEEEE; height: 30px; font-size: 16px;color: #666; font-weight: bold;\">" +
+                            "运费</td>" +
+                            "<td width=\"94\" valign=\"middle\" style=\"background: #EFEEEE; height: 30px; font-size: 16px;color: #666; font-weight: bold;\">" +
+                            "货到付款</td></tr>");
+                }
+            };
+            JYH.Linkage.Controls.bindAreaDrop(JYH.Linkage.DropProvince, JYH.Linkage.getProvinces(), "省份");
+            JYH.Linkage.Controls.bindAreaDrop(JYH.Linkage.DropCity, [], "城市");
+            JYH.Linkage.Controls.bindAreaDrop(JYH.Linkage.DropArea, [], "地区");
+
+
+            JYH.Linkage.DropProvince.change(function () {
+                var provinceID = $(this).val();
+                if (provinceID != "0") {
+                    JYH.Linkage.Controls.bindAreaDrop(JYH.Linkage.DropCity, JYH.Linkage.getAreasByParentID(provinceID), "城市");
+                    JYH.Linkage.Controls.bindAreaDrop(JYH.Linkage.DropArea, [], "地区");
+                    $("#address").val($(JYH.Linkage.DropProvince).find("option:selected").text().replace("*", ""));
+                }
+                else {
+                    JYH.Linkage.Controls.bindAreaDrop(JYH.Linkage.DropCity, [], "城市");
+                }
+            });
+            JYH.Linkage.DropCity.change(function () {
+                var cityID = $(this).val();
+                if (cityID != "0") {
+                    JYH.Linkage.Controls.bindAreaDrop(JYH.Linkage.DropArea, JYH.Linkage.getAreasByParentID(cityID), "地区");
+                    $("#address").val($(JYH.Linkage.DropProvince).find("option:selected").text().replace("*", "") + $(JYH.Linkage.DropCity).find("option:selected").text().replace("*", ""));
+                }
+                else {
+                    JYH.Linkage.Controls.bindAreaDrop(JYH.Linkage.DropArea, [], "地区");
+
+                }
+            });
+            JYH.Linkage.DropArea.change(function () {
+                var areaID = $(this).val();
+                var proID = encodeURIComponent($(JYH.Linkage.DropProvince).find("option:selected").text().replace("*", ""));
+                var cityID = encodeURIComponent($(JYH.Linkage.DropCity).find("option:selected").text().replace("*", ""));
+                if (areaID != "0") {
+                    $("#address").val($(JYH.Linkage.DropProvince).find("option:selected").text().replace("*", "") + $(JYH.Linkage.DropCity).find("option:selected").text().replace("*", "") + $(JYH.Linkage.DropArea).find("option:selected").text().replace("*", ""));
+                    //处理自己的代码
+                }
+            });
+
+        });
+        
+    </script>
+</head>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <label class="col-sm-2 control-label;"  style=" text-align:right " >
+                编码：</label>
+            <div class="col-sm-4">
+                <input type="text" placeholder="险种" class="form-control">
+            </div>
+            <label class="col-sm-2 control-label" style=" text-align:right ">
+                所在省：</label>
+            <div class="col-sm-4">
+                <select name="select5" id="drpProvince" class="select" style="width: 120px; height: 30px; ">
+                </select>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px">
+           <label class="col-sm-2 control-label" style=" text-align:right ">
+                所在市：</label>
+            <div class="col-sm-4">
+                <select name="select5" id="drpCity" class="select" style="width: 120px; height: 30px; ">
+                </select>
+            </div>
+            <label class="col-sm-2 control-label" style=" text-align:right ">
+                所在区：</label>
+            <div class="col-sm-4">
+                <select name="select5" id="drpArea" class="select" style="width: 120px; height: 30px; ">
+                </select>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 20px">
+           <label class="col-sm-2 control-label" style=" text-align:right ">
+                所在县：</label>
+            <div class="col-sm-4">
+                <input type="text" placeholder="县" class="form-control">
+            </div>
+            <label class="col-sm-2 control-label" style=" text-align:right ">
+                年：</label>
+            <div class="col-sm-4">
+                <input type="text" placeholder="年" class="form-control">
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px">
+           <label class="col-sm-2 control-label" style=" text-align:right ">
+                月：</label>
+            <div class="col-sm-4">
+                <input type="text" placeholder="月" class="form-control">
+            </div>
+            <label class="col-sm-2 control-label" style=" text-align:right ">
+                基数：</label>
+            <div class="col-sm-4">
+                <input type="text" placeholder="基数" class="form-control">
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px">
+           <label class="col-sm-2 control-label" style=" text-align:right ">
+                单位比列：</label>
+            <div class="col-sm-4">
+                <input type="text" placeholder="单位比例" class="form-control">
+            </div>
+            <label class="col-sm-2 control-label" style=" text-align:right ">
+                个人比例：</label>
+            <div class="col-sm-4">
+                <input type="text" placeholder="个人比例" class="form-control">
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px">
+           <label class="col-sm-2 control-label" style=" text-align:right ">
+                参保比列：</label>
+            <div class="col-sm-4">
+                <input type="text" placeholder="参保比例" class="form-control">
+            </div>
+            <label class="col-sm-2 control-label" style=" text-align:right ">
+                录入人员：</label>
+            <div class="col-sm-4">
+                <input type="text" placeholder="录入人员" class="form-control">
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px">
+           <label class="col-sm-2 control-label" style=" text-align:right ">
+                录入时间：</label>
+            <div class="col-sm-4">
+                <input type="text"  onfocus="new WdatePicker(this,null,false,'whyGreen')"   size="13"  class="form-control Wdate"  id="Text3" runat="server" />
+            </div>
+           
+        </div>
+       
+        <div class="row" style="margin-top: 20px; padding-left: 100px">
+            <a class="btn btn-sm btn-warning  col-sm-1" href="javascript:;" title="保存" style="margin-top: 2px;
+                padding-left: 20px; padding-right: 20px;">保存</strong></a>
+        </div>
+    </div>
+       <script type="text/javascript" src="lib/My97DatePicker/WdatePicker.js"></script> 
+    <script>
+        $(document).ready(function(){$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})});
+    </script>
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+</body>
+<!-- Mirrored from www.zi-han.net/theme/hplus/form_basic.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:15 GMT -->
+</html>

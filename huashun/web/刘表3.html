@@ -1,0 +1,603 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H+ 后台主题UI框架 - 客户管理</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.7/iconfont.css"/>
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/plugins/chosen/chosen.css" rel="stylesheet">
+    <link href="css/plugins/colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+    <link href="css/plugins/cropper/cropper.min.css" rel="stylesheet">
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    <link href="css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+    <link href="css/plugins/nouslider/jquery.nouislider.css" rel="stylesheet">
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.css" rel="stylesheet">
+    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+    <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css"
+          rel="stylesheet">
+    <link href="css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
+    <style>
+        .labelleft{
+            font-weight: bold;
+            width: 80px;
+            text-align: right;
+        }
+        .mytable td{
+            padding: 10px 0;
+        }
+        .nianyue{
+            width: 40px;
+        }
+    </style>
+</head>
+<body class="gray-bg">
+<nav class="breadcrumb">
+    <i class="Hui-iconfont" style=" font-size:25px">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 五险一金<span
+        class="c-gray en">&gt;</span> 五险一金区域基数表
+    <a style=" float:right; margin-right:20px" href="javascript:location.replace(location.href);" title="刷新"><i
+            class="Hui-iconfont" style=" font-size:22px; font-weight:bold">&#xe68f;</i></a></nav>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="tabs-container">
+        <div class="tab-content " style="padding: 10px ;background: #fff;margin-bottom: 20px;">
+            <div>
+
+                <table border="0" cellspacing="" cellpadding="" class="mytable">
+
+
+                    <tr>
+                        <td class="labelleft nianyue">省：</td>
+                        <td> <select class="form-control" name="Province" id="Province">
+                            <option>==请选择===</option>
+                        </select></td>
+
+                        <td class="labelleft nianyue">市：</td>
+                        <td> <select class="form-control" name="City" id="City">
+                            <option>==请选择===</option>
+                        </select></td>
+
+
+                        <td class="labelleft">区：</td>
+                        <td><select class="form-control" name="Village" id="Village">
+                            <option>==请选择===</option>
+                        </select></td>
+
+
+                    </tr>
+                    <tr>
+                        <td class="labelleft nianyue">年：</td>
+                        <td><select class="form-control" name="year">
+                            <option>==请选择==</option>
+                        </select></td>
+
+                        <td class="labelleft">月：</td>
+                        <td><select class="form-control" name="year">
+                            <option>==请选择==</option>
+                        </select></td>
+
+
+                    </tr>
+
+
+                </table>
+
+            </div>
+            <div class="row">
+
+                <div class="col-sm-1 pull-right">   <button class="btn btn-sm btn-primary m-t-n-xs" type="submit"
+                                                 style=" text-align:left; padding-left:20px; padding-right:20px">
+                    <strong>搜索</strong></button></div>
+
+               
+            </div>
+
+        </div>
+
+
+        <div class="tab-content">
+            <div id="tab-1" class="tab-pane active">
+                <div class="panel-body">
+                    <div class="row " style="padding-bottom: 10px">
+
+                    </div>
+                    <div class="row" style="">
+                        <div class="col-sm-12">
+                            <div class="ibox float-e-margins">
+                                <div class="ibox-title" style="padding-top: 5px; padding-bottom: 0px">
+                                    <h5 style="margin-top: 10px">
+                                        五险合一区域基数</h5>
+                                    <div class="ibox-tools">
+                                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a><a
+                                            class="dropdown-toggle"
+                                            data-toggle="dropdown" href="table_data_tables.html#"><i
+                                            class="fa fa-wrench"></i>
+                                    </a>
+
+                                        <a class="close-link"><i class="fa fa-times"></i></a>
+                                    </div>
+                                </div>
+                                <div class="ibox-content">
+                                	<!--操作组s -->
+                    	<div class="ctrlbar">
+                    		<!--<button class="btn btn-sm btn-primary">新增</button>
+                    		<button class="btn btn-sm btn-warning">编辑</button>
+                    		<button class="btn btn-sm btn-danger">删除</button>
+                    		<button class="btn btn-sm btn-default">提交</button>
+                    		<button class="btn btn-sm btn-info">导出</button>
+                    		<button class="btn btn-sm btn-success">审核</button>-->
+                    		
+                    		<button class="btn btn-sm btn-danger">删除</button>
+                    		<button class="btn btn-sm btn-primary">新增</button>
+                    	</div>
+						<!--操作组 e-->
+                                    <table class="table table-striped table-bordered table-hover ">
+                                        <thead>
+                                        <tr>
+                                            <th>
+                                                编码ID
+                                            </th>
+                                            <th>
+                                                省
+                                            </th>
+                                            <th>
+                                                市
+                                            </th>
+                                            <th>
+                                                区
+                                            </th>
+                                            <th>
+                                                县
+                                            </th>
+                                            <th>
+                                                年
+                                            </th>
+                                            <th>
+                                                月
+                                            </th>
+                                           
+                                            <th>
+                                                参保比例
+                                            </th>
+                                            <th>
+                                                录入时间
+                                            </th>
+                                            <th>
+                                                录入人员
+                                            </th>
+                                            <th>
+                                                操作
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="gradeX">
+                                            <td>
+                                                001
+                                            </td>
+                                            <td>
+                                                湖北
+                                            </td>
+                                            <td>
+                                                武汉
+                                            </td>
+                                            <td class="center">
+                                                洪山区
+                                            </td>
+                                            <td class="center">
+                                                和平县
+                                            </td>
+                                            <td class="center">
+                                                1998
+                                            </td>
+                                            <td class="center">
+                                                11
+                                            </td>
+                                           
+                                            <td class="center">
+                                                0.88
+                                            </td>
+                                            <td class="center">
+                                                1919-11-11
+                                            </td>
+                                            <td>
+                                                刘仲玺
+                                            </td>
+                                            <td class="f-14 td-manage">
+
+                                                <a style="text-decoration: none; margin-left:10px"
+                                                   class="btn btn-sm btn-warning"
+                                                   onclick="member_add('编辑','editwxyjqyjsbdb_v1.html','','400')"
+                                                   href="javascript:;" title="编辑">重设</a>
+
+                                            </td>
+                                        </tr>
+
+                                        <tr class="gradeX">
+                                            <td>
+                                                002
+                                            </td>
+                                            <td>
+                                                湖北
+                                            </td>
+                                            <td>
+                                                荆州
+                                            </td>
+                                            <td class="center">
+                                                荆州开发区
+                                            </td>
+                                            <td class="center">
+                                                北平县
+                                            </td>
+                                            <td class="center">
+                                                1998
+                                            </td>
+                                            <td class="center">
+                                                11
+                                            </td>
+                                            
+                                            <td class="center">
+                                                0.88
+                                            </td>
+                                            <td class="center">
+                                                1919-11-11
+                                            </td>
+                                            <td>
+                                                刘仲玺
+                                            </td>
+                                            <td class="f-14 td-manage">
+                                                <a style="text-decoration: none; margin-left:10px"
+                                                   class="btn btn-sm btn-warning"
+                                                   onclick="member_add('编辑','editwxyjqyjsbdb_v1.html','','400')"
+                                                   href="javascript:;" title="编辑">重设</a>
+
+                                            </td>
+                                        </tr>
+
+
+                                        <tr class="gradeX">
+                                            <td>
+                                                003
+                                            </td>
+                                            <td>
+                                                湖北
+                                            </td>
+                                            <td>
+                                                武汉
+                                            </td>
+                                            <td class="center">
+                                                洪山区
+                                            </td>
+                                            <td class="center">
+                                                东平县
+                                            </td>
+                                            <td class="center">
+                                                1998
+                                            </td>
+                                            <td class="center">
+                                                11
+                                            </td>
+                                            
+                                            <td class="center">
+                                                0.88
+                                            </td>
+                                            <td class="center">
+                                                1919-11-11
+                                            </td>
+                                            <td>
+                                                刘仲玺
+                                            </td>
+                                            <td class="f-14 td-manage">
+
+                                                <a style="text-decoration: none; margin-left:10px"
+                                                   class="btn btn-sm btn-warning"
+                                                   onclick="member_add('编辑','editwxyjqyjsbdb_v1.html','','400')"
+                                                   href="javascript:;" title="编辑">重设</a>
+
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                        <tfoot>
+                                        </tfoot>
+                                    </table>
+                                    <div class="row">
+                                        <div class="col-sm-9"></div>
+                                        <div class="col-sm-3">
+                                            <ul class="pager">
+                                                <li><a href="#">首页</a></li>
+                                                <li><a href="#">上一页</a></li>
+                                                <li><a href="#">下一页</a></li>
+
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-content">
+        	 <div class="ibox float-e-margins">
+        	 	 <div class="ibox-content">
+        <table border="" cellspacing="" cellpadding="" class="table table-bordered table-hover">
+                    <tr>
+                        <td class="labelleft ">险种：</td>
+                        <td><span class="labelleft" >工伤保险</span></td>
+                        <td class="labelleft ">基数：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+                        <td class="labelleft">单位比例：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+                        <td class="labelleft">个人比例：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+
+                        <td class="labelleft">参保比例：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+                        <td class="labelleft">备注：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+
+                    </tr>
+
+                    <tr>
+                        <td class="labelleft ">险种：</td>
+                        <td><span class="labelleft" >养老保险</span></td>
+                        <td class="labelleft ">基数：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+                        <td class="labelleft">单位比例：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+                        <td class="labelleft">个人比例：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+
+                        <td class="labelleft">参保比例：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+                        <td class="labelleft">备注：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+
+                    </tr>
+                    <tr>
+                        <td class="labelleft ">险种：</td>
+                        <td><span class="labelleft" >医疗保险</span></td>
+                        <td class="labelleft ">基数：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+                        <td class="labelleft">单位比例：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+                        <td class="labelleft">个人比例：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+
+                        <td class="labelleft">参保比例：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+                        <td class="labelleft">备注：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+
+                    </tr>
+                    <tr>
+                        <td class="labelleft ">险种：</td>
+                        <td><span class="labelleft" >生育保险</span></td>
+                        <td class="labelleft ">基数：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+                        <td class="labelleft">单位比例：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+                        <td class="labelleft">个人比例：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+
+                        <td class="labelleft">参保比例：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+                        <td class="labelleft">备注：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+
+                    </tr>
+                    <tr>
+                        <td class="labelleft ">险种：</td>
+                        <td><span class="labelleft" >失业保险</span></td>
+                        <td class="labelleft ">基数：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+                        <td class="labelleft">单位比例：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+                        <td class="labelleft">个人比例：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+
+                        <td class="labelleft">参保比例：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+                        <td class="labelleft">备注：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+
+                    </tr>
+                    <tr>
+                        <td class="labelleft ">险种：</td>
+                        <td><span class="labelleft" >大病保险</span></td>
+                        <td class="labelleft ">基数：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+                        <td class="labelleft">单位比例：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+                        <td class="labelleft">个人比例：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+
+                        <td class="labelleft">参保比例：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+                        <td class="labelleft">备注：</td>
+                        <td><input type="text" class="form-control input-sm"/></td>
+
+                    </tr>
+
+
+        </table>
+        </div>
+        </div>
+        </div>
+      
+                <script src="js/jquery.min.js?v=2.1.4"></script>
+                <script src="js/bootstrap.min.js?v=3.3.6"></script>
+                <script src="js/content.min.js?v=1.0.0"></script>
+                <script src="js/plugins/jeditable/jquery.jeditable.js"></script>
+                <script src="js/plugins/dataTables/jquery.dataTables.js"></script>
+                <script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+                <script type="text/javascript" src="lib/layer/2.1/layer.js"></script>
+                <script type="text/javascript" src="js/main.js"></script>
+                <script type="text/javascript" src="lib/My97DatePicker/WdatePicker.js"></script>
+                <script src="js/plugins/chosen/chosen.jquery.js"></script>
+                <script>
+                    $(document).ready(function () {
+                        $(".dataTables-example").dataTable();
+                        var oTable = $("#editable").dataTable();
+                        oTable.$("td").editable("http://www.zi-han.net/theme/example_ajax.php", {
+                            "callback": function (sValue, y) {
+                                var aPos = oTable.fnGetPosition(this);
+                                oTable.fnUpdate(sValue, aPos[0], aPos[1])
+                            }, "submitdata": function (value, settings) {
+                                return {"row_id": this.parentNode.getAttribute("id"), "column": oTable.fnGetPosition(this)[2]}
+                            }, "width": "90%", "height": "100%"
+                        })
+                    });
+                    function fnClickAddRow() {
+                        $("#editable").dataTable().fnAddData(["Custom row", "New row", "New row", "New row", "New row"])
+                    }
+                    ;
+                </script>
+                <script>
+                    function member_add(title, url, w, h) {
+                        layer_show(title, url, w, h);
+                    }
+                </script>
+                <script>
+                    function admin_del(obj, id) {
+                        layer.confirm('确认要删除吗？', function (index) {
+                            //此处请求后台程序，下方是成功后的前台处理……
+
+                            $(obj).parents("tr").remove();
+                            layer.msg('已删除!', {icon: 1, time: 1000});
+                        });
+                    }
+                </script>
+                <script type="javascript">
+
+
+                    $(function () {
+
+
+                        //默认绑定省
+                        ProviceBind();
+                        //绑定事件
+                        $("#Province").change( function () {
+                            CityBind();
+                        })
+
+                        $("#City").change(function () {
+                            VillageBind();
+                        })
+
+
+
+
+                    })
+                    function Bind(str) {
+                        alert($("#Province").html());
+                        $("#Province").val(str);
+
+
+                    }
+                    function ProviceBind() {
+                        //清空下拉数据
+                        $("#Province").html("");
+
+
+
+
+                        var str = "<option>==请选择===</option>";
+                        $.ajax({
+                            type: "POST",
+                            url: "/Home/GetAddress",
+                            data: { "parentiD": "", "MyColums": "Province" },
+                            dataType: "JSON",
+                            async: false,
+                            success: function (data) {
+                                //从服务器获取数据进行绑定
+                                $.each(data.Data, function (i, item) {
+                                    str += "<option value=" + item.Id + ">" + item.MyTexts + "</option>";
+                                })
+                                //将数据添加到省份这个下拉框里面
+                                $("#Province").append(str);
+                            },
+                            error: function () { alert("Error"); }
+                        });
+
+
+
+
+                    }
+                    function CityBind() {
+
+
+                        var provice = $("#Province").attr("value");
+                        //判断省份这个下拉框选中的值是否为空
+                        if (provice == "") {
+                            return;
+                        }
+                        $("#City").html("");
+                        var str = "<option>==请选择===</option>";
+
+
+                        $.ajax({
+                            type: "POST",
+                            url: "/Home/GetAddress",
+                            data: { "parentiD": provice, "MyColums": "City" },
+                            dataType: "JSON",
+                            async: false,
+                            success: function (data) {
+                                //从服务器获取数据进行绑定
+                                $.each(data.Data, function (i, item) {
+                                    str += "<option value=" + item.Id + ">" + item.MyTexts + "</option>";
+                                })
+                                //将数据添加到省份这个下拉框里面
+                                $("#City").append(str);
+                            },
+                            error: function () { alert("Error"); }
+                        });
+
+
+                    }
+                    function VillageBind() {
+
+
+                        var provice = $("#City").attr("value");
+                        //判断市这个下拉框选中的值是否为空
+                        if (provice == "") {
+                            return;
+                        }
+                        $("#Village").html("");
+                        var str = "<option>==请选择===</option>";
+                        //将市的ID拿到数据库进行查询，查询出他的下级进行绑定
+                        $.ajax({
+                            type: "POST",
+                            url: "/Home/GetAddress",
+                            data: { "parentiD": provice, "MyColums": "Village" },
+                            dataType: "JSON",
+                            async: false,
+                            success: function (data) {
+                                //从服务器获取数据进行绑定
+                                $.each(data.Data, function (i, item) {
+                                    str += "<option value=" + item.Id + ">" + item.MyTexts + "</option>";
+                                })
+                                //将数据添加到省份这个下拉框里面
+                                $("#Village").append(str);
+                            },
+                            error: function () { alert("Error"); }
+                        });
+                        //$.post("/Home/GetAddress", { parentiD: provice, MyColums: "Village" }, function (data) {
+                        //    $.each(data.Data, function (i, item) {
+                        //        str += "<option value=" + item.Id + ">" + item.MyTexts + "</option>";
+                        //    })
+                        //    $("#Village").append(str);
+                        //})
+                    }
+
+                </script>
+        </body>
+</html>

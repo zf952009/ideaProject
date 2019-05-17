@@ -1,0 +1,422 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<!-- Mirrored from www.zi-han.net/theme/hplus/clients.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:44 GMT -->
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>H+ 后台主题UI框架 - 客户管理</title>
+
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+		<link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+
+		<link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+		<link href="css/animate.min.css" rel="stylesheet">
+		<link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.7/iconfont.css" />
+
+		<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+
+	</head>
+
+	<body class="gray-bg">
+		<nav class="breadcrumb">
+			<i class="Hui-iconfont" style=" font-size:25px">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 派遣
+			<a style=" float:right; margin-right:20px" href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont" style=" font-size:22px; font-weight:bold">&#xe68f;</i></a>
+		</nav>
+
+		<div class="wrapper wrapper-content animated fadeInRight">
+
+	
+			
+			<div class="row " style=" padding-bottom:10px;margin: 20px auto;">
+				<!--1-->
+				<div class="form-group col-sm-11" style="background: #fff;padding: 20px;">
+					<div class="row">
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">客户主数据：</label>
+						<div class="col-sm-3">
+							<select data-placeholder="选择用户组..." class="chosen-select form-control input-sm" tabindex="2">
+								<option value="">广电</option>
+								<option value="110000" hassubinfo="true">联通</option>
+								<option value="120000" hassubinfo="true">戴尔</option>
+							</select>
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">结算点：</label>
+						<div class="col-sm-3">
+							<select data-placeholder="选择用户组..." class="chosen-select form-control input-sm" tabindex="2">
+								<option value="">湖北广电</option>
+								<option value="110000" hassubinfo="true">湖南广电</option>
+								<option value="120000" hassubinfo="true">广东广电</option>
+							</select>
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">合同编号：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+					</div>
+					<div class="row">
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">合同签订时间：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">派遣部门：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">派遣岗位：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+					</div>
+					<div class="row">
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">工作地址：</label>
+						<div class="col-sm-3">
+							<select data-placeholder="选择用户组..." class="chosen-select form-control input-sm" tabindex="2">
+								<option value="">湖北武汉</option>
+								<option value="110000" hassubinfo="true">湖北宜昌</option>
+								<option value="120000" hassubinfo="true">湖北襄阳</option>
+							</select>
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">派遣负责人：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+					</div>
+				</div>
+
+				<!--1-->
+
+				<!--2-->
+				<div class="form-group col-sm-11" style="background: #fff;padding: 20px;">
+					<div class="row">
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">员工姓名：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">员工身份证：</label>
+						<div class="col-sm-3">
+							<select data-placeholder="选择用户组..." class="chosen-select form-control input-sm" tabindex="2">
+								<option value="">420420111111111111111</option>
+								<option value="110000" hassubinfo="true">520420111111111111111</option>
+								<option value="120000" hassubinfo="true">620420111111111111111</option>
+
+							</select>
+
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">员工电话：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+
+					</div>
+					<div class="row">
+
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">员工地址：</label>
+						<div class="col-sm-3">
+							<select data-placeholder="选择用户组..." class="chosen-select form-control" tabindex="2">
+								<option value="">湖北武汉A</option>
+								<option value="110000" hassubinfo="true">湖北武汉A区</option>
+								<option value="120000" hassubinfo="true">湖北武汉C区</option>
+
+							</select>
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">员工合同：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">基本薪酬：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+					</div>
+
+				</div>
+
+				<!--2-->
+
+				<!--3-->
+				<div class="form-group col-sm-11" style="background: #fff;padding: 20px;">
+					<div class="row">
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">险种：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" value="五险合一" />
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">基数：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+
+							</select>
+
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">个人比例：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+
+					</div>
+					<div class="row">
+
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">单位比例：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">参考比例：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">状态：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+					</div>
+
+				</div>
+				<!--3-->
+
+				<!--3-->
+				<div class="form-group col-sm-11" style="background: #fff;padding: 20px;">
+					<div class="row">
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">险种：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" value="社会保险" />
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">基数：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+
+							</select>
+
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">个人比例：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+
+					</div>
+					<div class="row">
+
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">单位比例：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">参考比例：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">状态：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+					</div>
+
+				</div>
+				<!--3-->
+				<!--3-->
+				<div class="form-group col-sm-11" style="background: #fff;padding: 20px;">
+					<div class="row">
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">险种：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" value="工伤保险" />
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">基数：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+
+							</select>
+
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">个人比例：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+
+					</div>
+					<div class="row">
+
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">单位比例：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">参考比例：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">状态：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+					</div>
+
+				</div>
+				<!--3-->
+				<!--3-->
+				<div class="form-group col-sm-11" style="background: #fff;padding: 20px;">
+					<div class="row">
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">险种：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" value="医疗保险" />
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">基数：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+
+							</select>
+
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">个人比例：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+
+					</div>
+					<div class="row">
+
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">单位比例：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">参考比例：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">状态：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+					</div>
+
+				</div>
+				<!--3-->
+				<!--3-->
+				<div class="form-group col-sm-11" style="background: #fff;padding: 20px;">
+					<div class="row">
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">险种：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" value="生育保险" />
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">基数：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+
+							</select>
+
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">个人比例：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+
+					</div>
+					<div class="row">
+
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">单位比例：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">参考比例：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">状态：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+					</div>
+
+				</div>
+				<!--3-->
+				<!--3-->
+				<div class="form-group col-sm-11" style="background: #fff;padding: 20px;">
+					<div class="row">
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">险种：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" value="社会保险" />
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">基数：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+
+							</select>
+
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">个人比例：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+
+					</div>
+					<div class="row">
+
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">单位比例：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">参考比例：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+						<label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">状态：</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control input-sm" />
+						</div>
+					</div>
+
+				</div>
+				<!--3-->
+				<div class="row col-sm-10">
+					<button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit">
+                    <strong>确认派遣</strong></button>
+
+				</div>
+			</div>
+
+		</div>
+
+		<script src="js/jquery.min.js?v=2.1.4"></script>
+		<script src="js/bootstrap.min.js?v=3.3.6"></script>
+		<script src="js/plugins/jeditable/jquery.jeditable.js"></script>
+		<script src="js/plugins/dataTables/jquery.dataTables.js"></script>
+		<script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+		<script type="text/javascript" src="lib/layer/2.1/layer.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="lib/My97DatePicker/WdatePicker.js"></script>
+		<script src="js/content.min.js?v=1.0.0"></script>
+		<script>
+			$(document).ready(function() {
+				$(".dataTables-example").dataTable();
+				var oTable = $("#editable").dataTable();
+				oTable.$("td").editable("http://www.zi-han.net/theme/example_ajax.php", {
+					"callback": function(sValue, y) {
+						var aPos = oTable.fnGetPosition(this);
+						oTable.fnUpdate(sValue, aPos[0], aPos[1])
+					},
+					"submitdata": function(value, settings) {
+						return {
+							"row_id": this.parentNode.getAttribute("id"),
+							"column": oTable.fnGetPosition(this)[2]
+						}
+					},
+					"width": "90%",
+					"height": "100%"
+				})
+			});
+
+			function fnClickAddRow() {
+				$("#editable").dataTable().fnAddData(["Custom row", "New row", "New row", "New row", "New row"])
+			};
+		</script>
+
+		<script>
+			function member_add(title, url, w, h) {
+				layer_show(title, url, w, h);
+			}
+		</script>
+
+		<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+	</body>
+
+</html>

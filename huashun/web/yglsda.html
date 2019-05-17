@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.zi-han.net/theme/hplus/clients.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:44 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>H+ 后台主题UI框架 - 客户管理</title>
+    <meta name="keywords" content="H+后台主题,后台bootstrap框架,会员中心主题,后台HTML,响应式后台">
+    <meta name="description" content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+
+    <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.7/iconfont.css"/>
+
+
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+<nav class="breadcrumb">
+    <i class="Hui-iconfont" style=" font-size:25px">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 员工管理 <span
+        class="c-gray en">&gt;</span> 员工轨迹管理
+    <a style=" float:right; margin-right:20px" href="javascript:location.replace(location.href);" title="刷新"><i
+            class="Hui-iconfont" style=" font-size:22px; font-weight:bold">&#xe68f;</i></a></nav>
+
+
+<div class="wrapper wrapper-content animated fadeInRight">
+
+    <div class="row " style=" padding-bottom:10px">
+
+        <div class="row " style=" padding-bottom:10px">
+
+            <div class="form-group">
+                <label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">员工编号：</label>
+                <div class="col-sm-1">
+                    <input type="text" class="form-control" style="width: 150px;"/>
+                </div>
+
+                <label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">原公部门名称：</label>
+                <div class="col-sm-1">
+                    <select class="form-control" name="year">
+                        <option>请选择</option>
+                        <option>宣传部</option>
+                        <option>组织部</option>
+                        <option>市场部</option>
+                    </select>
+                </div>
+
+
+                <div class="row " style=" padding-bottom:10px">
+                    <div class="form-group">
+
+                        <label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">原公司名称：</label>
+                        <div class="col-sm-1">
+                            <select class="form-control" name="year">
+                                <option>请选择</option>
+                                <option>骏达</option>
+                                <option>网源</option>
+                                <option>ibm</option>
+                            </select>
+                        </div>
+
+
+                        <div class="col-sm-3 pull-right">
+                            <button class="btn btn-sm btn-primary pull-left m-t-n-xs" type="submit"
+                                    style=" text-align:left; margin-top:5px; padding-left:20px; padding-right:20px"><strong>搜索</strong>
+                            </button>
+                        </div>
+                        <label class="col-sm-1 control-label" style=" text-align:right; margin-top:10px">现任岗位：</label>
+
+                        </select>
+                        <div class="col-sm-1">
+                            <select class="form-control" name="year">
+                                <option>请选择</option>
+                                <option>经理</option>
+                                <option>主管</option>
+                                <option>总监</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+
+    <div class="row" style=" ">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title" style=" padding-top:5px; padding-bottom:0px">
+                    <h5 style="  margin-top:10px">客户主数据</h5>
+
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="table_data_tables.html#">
+                            <i class="fa fa-wrench"></i>
+                        </a>
+
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div>
+                        <a onclick="alert('确认删除?')" class="btn btn-sm btn-danger"><i class=""></i> 删除</a>
+                        <a onclick="member_add('添加账号','tjzh.html','','300')" class="btn btn-sm btn-primary"
+                           href="javascript:;" title="锁定账号"><i class="Hui-iconfont" >
+                        </i>添加账户</a>
+                        <a  class="btn btn-sm btn-primary"><i class=""></i>导出</a>
+                    </div>
+                    <table class="table table-striped table-bordered table-hover ">
+                        <thead>
+                        <tr>
+						<th>&nbsp;&nbsp;</th>
+                            <th>
+                                姓名
+                            </th>
+                            <th>
+                                员工编号
+                            </th>
+                            <th>
+                                原公司名称
+                            </th>
+                            <th>
+                                现公司名称
+                            </th>
+                            <th>
+                                原部门名称
+                            </th>
+                            <th>
+                                现部门名称
+                            </th>
+                            <th>
+                                原任岗位
+                            </th>
+                            <th>
+                                现任岗位
+                            </th>
+                            <th>
+                                原职级
+                            </th>
+                            <th>
+                                现职级
+                            </th>
+                            <th>
+                                原薪酬
+                            </th>
+                            <th>
+                                现薪酬
+                            </th>
+                            <th>
+                                变动日期
+                            </th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="gradeX">
+						 <td><input type="checkbox" /></td>
+                            <td>
+                                刘仲玺
+                            </td>
+                            <td>
+                                001
+                            </td>
+                            <td>
+                                骏达暖通
+                            </td>
+                            <td class="center">
+                                湖北助联
+                            </td>
+                            <td class="center">
+                                网络部
+                            </td>
+                            <td class="center">
+                                市场部
+                            </td>
+                            <td class="center">
+                                经理
+                            </td>
+                            <td class="center">
+                                主管
+                            </td>
+                            <td class="center">
+                                副局级
+                            </td>
+                            <td class="center">
+                                正局级
+                            </td>
+                            <td class="center">
+                                5000
+                            </td>
+                            <td class="center">
+                                6000
+                            </td>
+                            <td>
+                                2016-1-1
+                            </td>
+
+                        </tr>
+
+
+						<tr class="gradeX">
+						 <td><input type="checkbox" /></td>
+                            <td>
+                                刘雷
+                            </td>
+                            <td>
+                                002
+                            </td>
+                            <td>
+                                IBM
+                            </td>
+                            <td class="center">
+                                IBM
+                            </td>
+                            <td class="center">
+                                营销部
+                            </td>
+                            <td class="center">
+                                市场部
+                            </td>
+                            <td class="center">
+                                经理
+                            </td>
+                            <td class="center">
+                                主管
+                            </td>
+                            <td class="center">
+                                副局级
+                            </td>
+                            <td class="center">
+                                正局级
+                            </td>
+                            <td class="center">
+                                7000
+                            </td>
+                            <td class="center">
+                                9000
+                            </td>
+                            <td>
+                                2016-1-1
+                            </td>
+
+                        </tr>
+
+						<tr class="gradeX">
+						 <td><input type="checkbox" /></td>
+                            <td>
+                                刘凯
+                            </td>
+                            <td>
+                                003
+                            </td>
+                            <td>
+                                仙童
+                            </td>
+                            <td class="center">
+                                湖北助联
+                            </td>
+                            <td class="center">
+                                IT部
+                            </td>
+                            <td class="center">
+                                市场部
+                            </td>
+                            <td class="center">
+                                经理
+                            </td>
+                            <td class="center">
+                                主管
+                            </td>
+                            <td class="center">
+                                副局级
+                            </td>
+                            <td class="center">
+                                正局级
+                            </td>
+                            <td class="center">
+                                5000
+                            </td>
+                            <td class="center">
+                                8000
+                            </td>
+                            <td>
+                                2016-1-1
+                            </td>
+
+                        </tr>
+                        </tbody>
+                        <tfoot>
+
+                        </tfoot>
+                    </table>
+
+                     <div class="row">
+                         <div class="col-sm-9"></div>
+                         <div class="col-sm-3">
+                             <ul class="pager">
+                                 <li><a href="#">首页</a></li>
+                                 <li><a href="#">上一页</a></li>
+                                 <li><a href="#">下一页</a></li>
+
+                             </ul>
+
+                         </div>
+                     </div>
+ </span></span> </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="js/jquery.min.js?v=2.1.4"></script>
+<script src="js/bootstrap.min.js?v=3.3.6"></script>
+<script src="js/plugins/jeditable/jquery.jeditable.js"></script>
+<script src="js/plugins/dataTables/jquery.dataTables.js"></script>
+<script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+<script type="text/javascript" src="lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="lib/My97DatePicker/WdatePicker.js"></script>
+<script src="js/content.min.js?v=1.0.0"></script>
+<script>
+    $(document).ready(function () {
+        $(".dataTables-example").dataTable();
+        var oTable = $("#editable").dataTable();
+        oTable.$("td").editable("http://www.zi-han.net/theme/example_ajax.php", {
+            "callback": function (sValue, y) {
+                var aPos = oTable.fnGetPosition(this);
+                oTable.fnUpdate(sValue, aPos[0], aPos[1])
+            }, "submitdata": function (value, settings) {
+                return {"row_id": this.parentNode.getAttribute("id"), "column": oTable.fnGetPosition(this)[2]}
+            }, "width": "90%", "height": "100%"
+        })
+    });
+    function fnClickAddRow() {
+        $("#editable").dataTable().fnAddData(["Custom row", "New row", "New row", "New row", "New row"])
+    }
+    ;
+</script>
+
+<script>
+    function member_add(title, url, w, h) {
+        layer_show(title, url, w, h);
+    }
+</script>
+
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+<!-- 添加 和 删除 修改 按钮的 跳转-->
+<script>
+    document.getElementById("btn-1").addEventListener("click",function(){
+
+        //alert("qqq");
+        self.location='bfxq.html';
+    },false);
+    document.getElementById("btn-2").addEventListener("click",function(){
+
+        //alert("qqq");
+        self.location='bfxq.html';
+    },false);
+    document.getElementById("btn-3").addEventListener("click",function(){
+
+        //alert("qqq");
+        self.location='bfxq.html';
+    },false);
+</script>
+</body>
+</html>

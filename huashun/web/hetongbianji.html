@@ -1,0 +1,446 @@
+﻿<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.zi-han.net/theme/hplus/clients.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:44 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>H+ 后台主题UI框架 - 客户管理</title>
+
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+
+    <link href="css/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.7/iconfont.css"/>
+
+
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript">
+        function show() {
+            var showview=document.getElementById("xqht");
+            showview.style.display="block";
+
+        }
+    </script>
+
+</head>
+
+<body class="gray-bg">
+<nav class="breadcrumb">
+    <i class="Hui-iconfont" style=" font-size:25px">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 劳务合同管理 <span
+        class="c-gray en">&gt;</span> 新签合同
+    <a style=" float:right; margin-right:20px" href="javascript:location.replace(location.href);" title="刷新"><i
+            class="Hui-iconfont" style=" font-size:22px; font-weight:bold">&#xe68f;</i></a></nav>
+
+
+<div class="wrapper wrapper-content animated fadeInRight">
+
+
+    <div class="white-bg ">
+
+        <div class="row text-center  center-block" style=" padding-bottom:10px">
+
+                <label class="col-sm-6 control-label text-center" style=" text-align:right; margin-top:10px"><h2>劳动合同签订</h2></label>
+        </div>
+
+        <div class="row " style=" padding-bottom:10px">
+
+            <div class="form-group">
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">操作类别：</label>
+                <div class="col-sm-4">
+                    <div class="input-group">
+                        <select data-placeholder="选择用户组..." class="chosen-select" style="width: 230px; height: 30px"
+                                tabindex="2">
+                            <option value="">新增</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">合同编号：</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="row " style=" padding-bottom:10px">
+
+            <div class="form-group">
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">姓名：</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control"/>
+                </div>
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">身份证：</label>
+                <div class="col-sm-4">
+                    <div class="input-group">
+                        <select data-placeholder="选择用户组..." class="chosen-select" style="width: 230px; height: 30px"
+                                tabindex="2">
+                            <option value="">4206241990071577775555</option>
+                            <option value="110000" hassubinfo="true">5555555555555555555555</option>
+                            <option value="120000" hassubinfo="true">6666666666666666666666</option>
+                            <option value="120000" hassubinfo="true">5555555555555555555555</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row " style=" padding-bottom:10px">
+
+            <div class="form-group">
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">合同起始时间：</label>
+                <div class="col-sm-4">
+                    <input type="text" onfocus="new WdatePicker(this,null,false,'whyGreen')" size="13"
+                           class="form-control Wdate" id="Text12" runat="server"/>
+                </div>
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">合同终止时间：</label>
+                <div class="col-sm-4">
+                    <input type="text" onfocus="new WdatePicker(this,null,false,'whyGreen')" size="13"
+                           class="form-control Wdate" id="Text13" runat="server"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="row " style=" padding-bottom:10px">
+
+            <div class="form-group">
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">试用期起始时间：</label>
+                <div class="col-sm-4">
+                    <input type="text" onfocus="new WdatePicker(this,null,false,'whyGreen')" size="13"
+                           class="form-control Wdate" id="Text15" runat="server"/>
+                </div>
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">试用期终止时间：</label>
+                <div class="col-sm-4">
+                    <input type="text" onfocus="new WdatePicker(this,null,false,'whyGreen')" size="13"
+                           class="form-control Wdate" id="Text14" runat="server"/>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row " style=" padding-bottom:10px">
+
+            <div class="form-group">
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">合同期限：</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" value="3年"/>
+                </div>
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">试用期期限：</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" value="3个月"/>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row " style=" padding-bottom:10px">
+
+            <div class="form-group">
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">工作单位：</label>
+                <div class="col-sm-4">
+                    <div class="input-group">
+                        <select data-placeholder="选择用户组..." class="chosen-select" style="width: 230px; height: 30px"
+                                tabindex="2">
+                            <option value="">天门斗牛</option>
+                            <option value="110000" hassubinfo="true">宜昌古都</option>
+                            <option value="120000" hassubinfo="true">刘氏天下</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">工作位置：</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" value="湖北武汉市南京路"/>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row " style=" padding-bottom:10px">
+
+            <div class="form-group">
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">工作制：</label>
+                <div class="col-sm-4">
+                    <div class="input-group">
+                        <select data-placeholder="选择用户组..." class="chosen-select" style="width: 230px; height: 30px"
+                                tabindex="2">
+                            <option value="">白天8小时</option>
+                            <option value="110000" hassubinfo="true">晚上八小时</option>
+                            <option value="120000" hassubinfo="true">白加黑</option>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row pull-right" style=" padding-bottom:10px;padding-top: 10px">
+
+            <div class="col-sm-3">
+                <button onclick="hrefurl('lwht.html')" class="btn btn-sm btn-primary ">
+                    <strong>提交</strong></button>
+            </div>
+            <div class="col-sm-5" style="padding-right: 10px">
+                <button onclick="show()" class="btn btn-sm btn-warning  ">
+                    <i class="fa fa-plus"></i> <strong>继续添加</strong></button>
+            </div>
+
+            <div class="col-sm-4">
+                <button class="btn btn-sm btn-gray  " type="submit">
+                    <strong>打印</strong></button>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+<div id="xqht" class="wrapper wrapper-content animated fadeInRight"  style="display:none;padding-top: 30px">
+
+
+    <div class="white-bg">
+
+        <div class="row text-center  center-block" style=" padding-bottom:10px">
+
+            <label class="col-sm-6 control-label text-center" style=" text-align:right; margin-top:10px"><h2>劳动合同签订</h2> </label>
+        </div>
+
+        <div class="row " style=" padding-bottom:10px">
+
+            <div class="form-group">
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">操作类别：</label>
+                <div class="col-sm-4">
+                    <div class="input-group">
+                        <select data-placeholder="选择用户组..." class="chosen-select" style="width: 230px; height: 30px"
+                                tabindex="2">
+                            <option value="">新增</option>
+                            <option value="110000" hassubinfo="true">变更</option>
+                            <option value="120000" hassubinfo="true">续签</option>
+                            <option value="120000" hassubinfo="true">解除</option>
+                        </select>
+                    </div>
+                </div>
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">合同编号：</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="row " style=" padding-bottom:10px">
+
+            <div class="form-group">
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">姓名：</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control"/>
+                </div>
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">身份证：</label>
+                <div class="col-sm-4">
+                    <div class="input-group">
+                        <select data-placeholder="选择用户组..." class="chosen-select" style="width: 230px; height: 30px"
+                                tabindex="2">
+                            <option value="">4206241990071577775555</option>
+                            <option value="110000" hassubinfo="true">5555555555555555555555</option>
+                            <option value="120000" hassubinfo="true">6666666666666666666666</option>
+                            <option value="120000" hassubinfo="true">5555555555555555555555</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row " style=" padding-bottom:10px">
+
+            <div class="form-group">
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">合同起始时间：</label>
+                <div class="col-sm-4">
+                    <input type="text" onfocus="new WdatePicker(this,null,false,'whyGreen')" size="13"
+                           class="form-control Wdate" id="Text12" runat="server"/>
+                </div>
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">合同终止时间：</label>
+                <div class="col-sm-4">
+                    <input type="text" onfocus="new WdatePicker(this,null,false,'whyGreen')" size="13"
+                           class="form-control Wdate" id="Text13" runat="server"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="row " style=" padding-bottom:10px">
+
+            <div class="form-group">
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">试用期起始时间：</label>
+                <div class="col-sm-4">
+                    <input type="text" onfocus="new WdatePicker(this,null,false,'whyGreen')" size="13"
+                           class="form-control Wdate" id="Text15" runat="server"/>
+                </div>
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">试用期终止时间：</label>
+                <div class="col-sm-4">
+                    <input type="text" onfocus="new WdatePicker(this,null,false,'whyGreen')" size="13"
+                           class="form-control Wdate" id="Text14" runat="server"/>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row " style=" padding-bottom:10px">
+
+            <div class="form-group">
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">合同期限：</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" value="3年"/>
+                </div>
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">试用期期限：</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" value="3个月"/>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row " style=" padding-bottom:10px">
+
+            <div class="form-group">
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">工作单位：</label>
+                <div class="col-sm-4">
+                    <div class="input-group">
+                        <select data-placeholder="选择用户组..." class="chosen-select" style="width: 230px; height: 30px"
+                                tabindex="2">
+                            <option value="">天门斗牛</option>
+                            <option value="110000" hassubinfo="true">宜昌古都</option>
+                            <option value="120000" hassubinfo="true">刘氏天下</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">工作位置：</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" value="湖北武汉市南京路"/>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row " style=" padding-bottom:10px">
+
+            <div class="form-group">
+
+                <label class="col-sm-2 control-label" style=" text-align:right; margin-top:10px">工作制：</label>
+                <div class="col-sm-4">
+                    <div class="input-group">
+                        <select data-placeholder="选择用户组..." class="chosen-select" style="width: 230px; height: 30px"
+                                tabindex="2">
+                            <option value="">白天8小时</option>
+                            <option value="110000" hassubinfo="true">晚上八小时</option>
+                            <option value="120000" hassubinfo="true">白加黑</option>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row pull-right " style=" padding-bottom:10px">
+
+            <div class="col-sm-3 ">
+                <button onclick="hrefurl('lwht.html')" class="btn btn-sm btn-primary ">
+                    <strong>提交</strong></button>
+            </div>
+
+            <div class="col-sm-3 ">
+                <button onclick="hrefurl('lwht.html')" class="btn btn-sm btn-info ">
+                    <strong>批量提交</strong></button>
+            </div>
+
+            <div class="col-sm-3 ">
+                <button onclick="hrefurl('lwht.html')" class="btn btn-sm btn-warning  ">
+                    <i class="fa fa-plus"></i> <strong>继续添加</strong></button>
+            </div>
+
+            <div class="col-sm-3 ">
+                <button onclick="hrefurl('lwht.html')" class="btn btn-sm btn-gray  " >
+                    <strong>打印</strong></button>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/jquery.min.js?v=2.1.4"></script>
+<script src="js/bootstrap.min.js?v=3.3.6"></script>
+<script src="js/plugins/jeditable/jquery.jeditable.js"></script>
+<script src="js/plugins/dataTables/jquery.dataTables.js"></script>
+<script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+<script type="text/javascript" src="lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="lib/My97DatePicker/WdatePicker.js"></script>
+<script src="js/content.min.js?v=1.0.0"></script>
+<script>
+    $(document).ready(function () {
+        $(".dataTables-example").dataTable();
+        var oTable = $("#editable").dataTable();
+        oTable.$("td").editable("http://www.zi-han.net/theme/example_ajax.php", {
+            "callback": function (sValue, y) {
+                var aPos = oTable.fnGetPosition(this);
+                oTable.fnUpdate(sValue, aPos[0], aPos[1])
+            }, "submitdata": function (value, settings) {
+                return {"row_id": this.parentNode.getAttribute("id"), "column": oTable.fnGetPosition(this)[2]}
+            }, "width": "90%", "height": "100%"
+        })
+    });
+    function fnClickAddRow() {
+        $("#editable").dataTable().fnAddData(["Custom row", "New row", "New row", "New row", "New row"])
+    }
+    ;
+</script>
+
+<script>
+    function member_add(title, url, w, h) {
+        layer_show(title, url, w, h);
+    }
+</script>
+
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+</div>
+</body>
+</html>
